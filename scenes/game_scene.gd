@@ -1,17 +1,16 @@
-extends CanvasLayer
-
-@onready var label = $Label
-@onready var label2 = $Label2
-@onready var label3 = $Label3
+extends Node2D
+@onready var main = get_tree().get_root().get_node("Main2D")
+@onready var enemy = load("res://Characters/enemies/orc.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_parent().get_node("Character").get_node("MovementComponent").connect("movement_signal", _update_label)
-	get_parent().get_node("Character").get_node("AttackComponent").connect("attack_signal", _update_label2)
-	get_parent().get_node("Character").get_node("HealthComponent").connect("health_signal", _update_label3)
+	for i in range(10):
+		var instance: NPCCharacterBase = enemy.instantiate()
+		instance.set_target(%Character)
+		instance.position = Vector2(randi_range(0, 1000),randi_range(0, 900))
+		main.add_child.call_deferred(instance)
+	pass # Replace with function body.
 
-func _update_label(newState):
-	label.text = newState
-func _update_label2(newState):
-	label2.text = newState
-func _update_label3(newState):
-	label3.text = newState
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

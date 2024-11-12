@@ -1,10 +1,11 @@
 extends StateMachine
-class_name AttackComponent
+class_name NPCAttackComponent
 
-signal attack_signal(state)
+@export var target: PlayerCharacterBase = null
 
 @export var damage := 30.0
 @export var cooldown := 0.3
+@export var isProjectile: bool = false
 var cooldown_timer = 0
 
 @onready var main = get_tree().get_root().get_node("Main2D")
@@ -24,26 +25,9 @@ func _state_logic(delta):
 	if(cooldown_timer <= 0):
 		set_state("idle")
 	
-	# diagonal combination, else regular dir
-	if Input.is_action_pressed("attack_left"):
-		if Input.is_action_pressed("attack_up"):
-			shoot(-PI/4)
-		elif Input.is_action_pressed("attack_down"):
-			shoot(-3*PI/4)
-		else:
-			shoot( -PI/2)
-	elif Input.is_action_pressed("attack_right"):
-		if Input.is_action_pressed("attack_up"):
-			shoot(PI/4)
-		elif Input.is_action_pressed("attack_down"):
-			shoot(3*PI/4)
-		else:
-			shoot( PI/2)
-			
-	elif Input.is_action_pressed("attack_up"):
-		shoot(0)
-	elif Input.is_action_pressed("attack_down"):
-		shoot(PI)
+	if isProjectile && target != null:
+		var toTargetDir: Vector2 = (target.global_position - parent.global_position).normalized()
+		shoot(toTargetDir.angle() + PI/2)
 	
 
 func shoot(dir):
@@ -52,8 +36,8 @@ func shoot(dir):
 	cooldown_timer = cooldown
 	var instance = projectile.instantiate()
 	instance.dir = dir
-	instance.mask = 2
-	instance.damage = damage
+	instance.mask = 1
+	instance.damage = damage	
 	instance.spawnPos = parent.global_position + Vector2.from_angle(dir - PI/2) * 30
 	instance.spawnRot = dir
 	main.add_child.call_deferred(instance)

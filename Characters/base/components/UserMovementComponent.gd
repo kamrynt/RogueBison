@@ -1,5 +1,5 @@
 extends StateMachine
-class_name MovementComponent
+class_name UserMovementComponent
 
 @export var ACCELERATION: float = 2000.0
 @export var MAX_VELOCITY: float = 300.0

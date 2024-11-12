@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://ckbhp0erdge82"]
+[gd_scene load_steps=27 format=3 uid="uid://ckbhp0erdge82"]
 
+[ext_resource type="Script" path="res://Characters/base/PlayerCharacterBase.gd" id="1_c23e2"]
 [ext_resource type="Script" path="res://Characters/base/components/HealthComponent.gd" id="1_xatnc"]
 [ext_resource type="Texture2D" uid="uid://bqf0285rw6e1p" path="res://assets/Bonus/Characters/Cute Yui .png" id="2_twyyf"]
 [ext_resource type="Script" path="res://Characters/animated_sprite_2d.gd" id="3_d2oiq"]
-[ext_resource type="Script" path="res://Characters/base/components/MovementComponent.gd" id="4_86qdj"]
+[ext_resource type="Script" path="res://Characters/base/components/UserMovementComponent.gd" id="4_86qdj"]
 [ext_resource type="Script" path="res://Characters/base/components/AttackComponent.gd" id="5_n2rma"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kjy4"]
@@ -159,15 +160,16 @@ _data = {
 "idle": SubResource("Animation_jr841")
 }
 
-[node name="Character" type="CharacterBody2D"]
-disable_mode = 1
-script = ExtResource("1_xatnc")
+[node name="PlayerCharacterBase" type="CharacterBody2D" node_paths=PackedStringArray("healthNode", "movementNode", "attackNode")]
+collision_mask = 4
+script = ExtResource("1_c23e2")
+healthNode = NodePath("HealthComponent")
+movementNode = NodePath("UserMovementComponent")
+attackNode = NodePath("AttackComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_b2fr1")
 animation = &"idle"
-frame = 2
-frame_progress = 0.960025
 script = ExtResource("3_d2oiq")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
@@ -182,7 +184,7 @@ libraries = {
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("1_xatnc")
 
-[node name="MovementComponent" type="Node" parent="."]
+[node name="UserMovementComponent" type="Node" parent="."]
 script = ExtResource("4_86qdj")
 
 [node name="AttackComponent" type="Node" parent="."]
