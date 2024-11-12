@@ -23,22 +23,32 @@ func _state_logic(delta):
 	cooldown_timer -= delta
 	if(cooldown_timer <= 0):
 		set_state("idle")
+	
+	# diagonal combination, else regular dir
 	if Input.is_action_pressed("attack_left"):
-		set_state("attacking")
-		shoot(3* PI / 2)
+		if Input.is_action_pressed("attack_up"):
+			shoot(-PI/4)
+		elif Input.is_action_pressed("attack_down"):
+			shoot(-3*PI/4)
+		else:
+			shoot( -PI/2)
 	elif Input.is_action_pressed("attack_right"):
-		set_state("attacking")
-		shoot( PI/2)
+		if Input.is_action_pressed("attack_up"):
+			shoot(PI/4)
+		elif Input.is_action_pressed("attack_down"):
+			shoot(3*PI/4)
+		else:
+			shoot( PI/2)
+			
 	elif Input.is_action_pressed("attack_up"):
-		set_state("attacking")
 		shoot(0)
 	elif Input.is_action_pressed("attack_down"):
-		set_state("attacking")
 		shoot(PI)
 	
 
 func shoot(dir):
 	if(cooldown_timer > 0): return
+	set_state("attacking")
 	cooldown_timer = cooldown
 	var instance = projectile.instantiate()
 	instance.dir = dir

@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name BaseCharacter
+class_name CharacterBase
 
 @export var healthNode: HealthComponent
 @export var movementNode: MovementComponent
