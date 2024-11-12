@@ -64,7 +64,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_27qdx")
 text = "SFX"
 
-[node name="HSlider" type="HSlider" parent="Menu/GridContainer"]
+[node name="sfxslider" type="HSlider" parent="Menu/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -74,7 +75,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_27qdx")
 text = "Music"
 
-[node name="HSlider2" type="HSlider" parent="Menu/GridContainer"]
+[node name="musicslider" type="HSlider" parent="Menu/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -84,7 +86,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_27qdx")
 text = "Map Opacity"
 
-[node name="HSlider3" type="HSlider" parent="Menu/GridContainer"]
+[node name="mapopacityslider" type="HSlider" parent="Menu/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -110,4 +113,7 @@ theme_override_fonts/font = ExtResource("2_27qdx")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ktihy")
 text = "Back"
 
+[connection signal="value_changed" from="Menu/GridContainer/sfxslider" to="." method="_on_sfxslider_value_changed"]
+[connection signal="value_changed" from="Menu/GridContainer/musicslider" to="." method="_on_musicslider_value_changed"]
+[connection signal="value_changed" from="Menu/GridContainer/mapopacityslider" to="." method="_on_mapopacityslider_value_changed"]
 [connection signal="pressed" from="MarginContainer/BackBtn" to="." method="_on_back_btn_pressed"]
