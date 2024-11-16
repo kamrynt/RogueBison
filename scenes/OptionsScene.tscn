@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b7x42dan6k0jd"]
 
-[ext_resource type="Script" path="res://scenes/options_scene.gd" id="1_b8y8e"]
+[ext_resource type="Script" path="res://Scenes/options_scene.gd" id="1_b8y8e"]
 [ext_resource type="FontFile" uid="uid://c2g0ehckpfmr" path="res://assets/fonts/PixelifySans-Bold.ttf" id="2_27qdx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng4cm"]

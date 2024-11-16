@@ -1,16 +1,37 @@
 extends Node2D
 @onready var main = get_tree().get_root().get_node("Main2D")
-@onready var enemy = load("res://Characters/enemies/orc.tscn")
+
+var mapGenerator = preload("res://Scenes/Rooms/MapGenerator.gd").new()
+var roomChangeMinDelay = 0.5
+var roomChangeTimer = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for i in range(10):
-		var instance: NPCCharacterBase = enemy.instantiate()
-		instance.set_target(%Character)
-		instance.position = Vector2(randi_range(0, 1000),randi_range(0, 900))
-		main.add_child.call_deferred(instance)
+	var generated_scene = mapGenerator.generate()
+	var current_scene = get_tree().current_scene
+	if current_scene:
+		current_scene.add_child(generated_scene)
+		current_scene.move_child(generated_scene, 0)
+	else:
+		print("No current scene found.")
+	
+	mapGenerator.spawnRoom.setActive(%Character)
+	Globals.change_rooms.connect(handleRoomChange)
 	pass # Replace with function body.
+
+func handleRoomChange(dir):
+	if roomChangeTimer > 0: return
+	roomChangeTimer = roomChangeMinDelay
+	var adjRoom = mapGenerator.getAdjacentRoom(dir)
+	if adjRoom is Room:
+		mapGenerator.currentRoom.setInactive()
+		mapGenerator.currentRoom = adjRoom
+		adjRoom.setActive(%Character)
+		var pos = adjRoom.getDirCoords(Globals.OPPOSITE[dir])
+		get_node("Character").global_position = pos
+		print(adjRoom)
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	roomChangeTimer -= delta

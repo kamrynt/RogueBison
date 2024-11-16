@@ -11,9 +11,19 @@ config_version=5
 [application]
 
 config/name="Bison Madness"
-run/main_scene="res://scenes/GameScene.tscn"
+run/main_scene="res://Scenes/GameScene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://Globals.gd"
+
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [input]
 
