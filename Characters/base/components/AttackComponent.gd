@@ -8,7 +8,7 @@ signal attack_signal(state)
 var cooldown_timer = 0
 
 @onready var main = get_tree().get_root().get_node("Main2D")
-@onready var projectile = load("res://projectile.tscn")
+@onready var projectile = load("res://NonCharacters/projectile.tscn")
 @onready var  parent:CharacterBody2D = get_parent()
 
 # Called when the node enters the scene tree for the first time.
@@ -52,6 +52,8 @@ func shoot(dir):
 	cooldown_timer = cooldown
 	var instance = projectile.instantiate()
 	instance.dir = dir
+	instance.mask = 2
+	instance.damage = damage
 	instance.spawnPos = parent.global_position + Vector2.from_angle(dir - PI/2) * 30
 	instance.spawnRot = dir
 	main.add_child.call_deferred(instance)
