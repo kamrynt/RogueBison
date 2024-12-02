@@ -1,106 +1,137 @@
-# RogueBison
- Senior Project
 
-# 🦬 Bison Madness 🦬
-
-_A procedurally generated, AI-driven roguelike adventure set in the heart of an unforgiving jungle, where every decision could be your last._
-
-## Table of Contents
-- [About the Game](#about-the-game)
-- [Features](#features)
-- [Installation](#installation)
-- [How to Play](#how-to-play)
-- [Controls](#controls)
-- [Contributing](#contributing)
-- [Roadmap](#roadmap)
-- [License](#license)
+**Rogue Bison**  
+**A procedurally generated roguelike adventure celebrating HBCU culture, pride, and legacy.**  
 
 ---
 
-## About the Game
-
-**Bison Madness** is an action roguelike game developed using the Godot Engine, combining procedural generation with AI-driven adaptive enemies and environments. Every playthrough offers new challenges as AI dynamically adjusts to player behavior. Explore an immersive jungle environment inspired by Howard University, and face off against adaptive foes and formidable boss battles.
-
-## Features
-- **Procedural Generation**: Each dungeon layout is unique, ensuring high replayability.
-- **Adaptive Enemy AI**: Enemies respond to player actions, with NPCs that learn and change tactics in real-time.
-- **Bison Companion**: Gain the support of a bison companion who aids in combat, with behavior that evolves based on how you interact.
-- **Dynamic Boss Fights**: AI-driven bosses with multiple phases react to your strategies.
-- **AI-Driven Narrative**: Story elements adapt based on choices, creating a personalized experience.
-
-## Installation
-
-### Prerequisites
-- **Godot Engine**: Version 3.5 or higher recommended. [Download Godot](https://godotengine.org/download)
-
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/kamrynt/SeniorProject
-   ```
-2. Open the project in Godot:
-   - Launch Godot and click on "Import" in the project manager.
-   - Navigate to the cloned project folder and select the `project.godot` file.
-3. Run the project:
-   - Click the **Play** button or press `F5` to start the game.
-
-## How to Play
-
-1. Choose "New Game" from the main menu.
-2. Navigate procedurally generated jungle environments, defeat adaptive enemies, and survive as long as possible.
-3. Each time you die, you restart but retain certain unlocks to aid future runs.
-
-## Controls
-
-- **WASD or Arrow Keys**: Move
-- **Left Mouse Button**: Attack
-- **Right Mouse Button**: Block
-- **Space**: Dodge Roll
-- **E**: Interact
-- **Tab**: Inventory/Menu
-
-*These controls can be customized in the Settings menu.*
-
-## Contributing
-
-1. **Fork** the repository.
-2. **Create a new branch** for your feature or bugfix:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. **Commit** your changes:
-   ```bash
-   git commit -m "Add your message here"
-   ```
-4. **Push** to your branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a **Pull Request** with a description of your changes.
-
-### Development Guidelines
-- Use modular code with comments for clarity.
-- Follow Godot best practices to maintain code readability and performance.
-- Run tests to ensure no functionality is disrupted.
-
-## Roadmap
-
-- **v1.0**: Core Gameplay
-  - Basic procedural generation
-  - AI-driven enemy and companion behaviors
-  - Initial boss battle
-
-- **Future Plans**:
-  - Multiplayer Mode
-  - More playable characters and abilities
-  - New dungeon types and biomes
-
-For upcoming features and bugs, see the [Issues](https://github.com/yourusername/bison-madness/issues) page.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+## **Table of Contents**  
+1. [About the Project](#about-the-project)  
+2. [Features](#features)  
+3. [Getting Started](#getting-started)  
+    - [Prerequisites](#prerequisites)  
+    - [Installation](#installation)  
+4. [Technologies Used](#technologies-used)  
+5. [Game Design Overview](#game-design-overview)  
+6. [Contributing](#contributing)  
+7. [License](#license)  
+8. [Contact](#contact)  
 
 ---
 
-**Brace yourself for the Madness of the Jungle!**
+## **About the Project**  
+**Rogue Bison** is a vibrant 2D roguelike adventure inspired by Howard University and HBCU culture. Players take on the role of Madison, a freshman at Howard, as they battle rival mascots, explore iconic campus-inspired locations, and reclaim the MEAC trophy to restore Howard's pride as "The Real HU."
+
+### **Key Highlights**  
+- Procedurally generated levels based on HBCU campuses.  
+- AI-driven enemies and bosses that adapt to player strategies.  
+- Meaningful narrative choices that impact gameplay and story progression.  
+- Unique mechanics, including a Bison companion with upgradeable abilities.  
+
+Rogue Bison is more than a game—it’s a celebration of legacy, community, and excellence.
+
+---
+
+## **Features**  
+- **Dynamic Gameplay:** Procedurally generated environments and challenges ensure every playthrough is unique.  
+- **Cultural Representation:** Environments, items, and lore steeped in HBCU traditions.  
+- **Adaptive AI:** Intelligent enemies and bosses that respond to player actions.  
+- **Replayability:** Endless combinations of items, levels, and events for high replay value.  
+- **Customizable Companion:** Upgrade and specialize your Bison companion in combat or support roles.  
+
+---
+
+## **Getting Started**  
+
+### **Prerequisites**  
+- [Godot Engine](https://godotengine.org/) (Version 3.5 or later)  
+- Python 3.x (Optional, for additional tools/scripts)  
+- Git for version control  
+
+### **Installation**  
+1. **Clone the Repository:**  
+   ```bash
+   git clone https://github.com/your-username/rogue-bison.git
+   cd rogue-bison
+   ```
+
+2. **Open in Godot:**  
+   - Launch Godot and load the project by selecting the cloned directory.  
+
+3. **Run the Game:**  
+   - In Godot, press the **Play** button to start the game.  
+
+4. **Optional: Install Dependencies:**  
+   If using any Python-based tools or scripts, install dependencies with:  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## **Technologies Used**  
+- **Game Engine:** [Godot](https://godotengine.org/)  
+- **Language:** GDScript (Python-like scripting for Godot)  
+- **Database:** SQLite/Firebase for persistent game data  
+- **Collaboration Tools:**  
+  - [Figma](https://figma.com/) for UI/UX design  
+  - [GitHub](https://github.com/) for version control  
+  - Jira for project management  
+
+---
+
+## **Game Design Overview**  
+### **Core Gameplay:**  
+- Top-down 2D combat reminiscent of *The Binding of Isaac*.  
+- Procedural generation for dynamic levels and endless replayability.  
+- AI-driven bosses with multiple phases and evolving tactics.  
+
+### **Narrative:**  
+- Players navigate a branching storyline filled with Howard University pride and rival mascot lore.  
+- Decisions impact NPC relationships, gameplay, and story outcomes.  
+
+### **Art Style:**  
+- Vibrant 2D visuals inspired by HBCU culture.  
+- Simple character sprites contrasted with dramatic, larger-than-life bosses.  
+
+---
+
+## **Contributing**  
+We welcome contributions to **Rogue Bison**!  
+
+### **How to Contribute:**  
+1. Fork the repository.  
+2. Create a new branch:  
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```  
+3. Commit your changes:  
+   ```bash
+   git commit -m "Add some feature"
+   ```  
+4. Push to the branch:  
+   ```bash
+   git push origin feature/YourFeatureName
+   ```  
+5. Open a Pull Request.  
+
+### **Contribution Guidelines:**  
+- Adhere to the project’s coding style and commit message format.  
+- Test your changes thoroughly before submitting a pull request.  
+- Review the [Issues](#) tab for tasks and bug fixes.  
+
+---
+
+## **License**  
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## **Contact**  
+**Pixelated Intellects**  
+- Kamryn Tate  
+- Xavier Njoku  
+- Yordanos Tessema  
+- Jahsere Rush  
+- Temi Anjorin  
+
+**Project Repository:** [https://github.com/kamrynt/rogue-bison](https://github.com/your-username/rogue-bison)  
