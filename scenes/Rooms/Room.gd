@@ -1,7 +1,7 @@
 extends Node2D
 class_name Room
 
-@onready var enemy = load("res://Characters/enemies/orc.tscn")
+@onready var enemy = load("res://Characters/enemies/robot.tscn")
 @onready var main = get_tree().get_root().get_node("Main2D")
 
 enum DoorEnum {NoDoor, NormalDoor, BossDoor, HiddenDoor}
@@ -27,7 +27,8 @@ func spawnMonsters(target):
 			monsters.append(instance)
 func destroyMonsters():
 	for monster in monsters:
-		monster.queue_free()
+		if monster != null:
+			monster.queue_free()
 
 func getDirCoords(dir):
 	match dir:
