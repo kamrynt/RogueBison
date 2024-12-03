@@ -297,7 +297,7 @@ attackNode = NodePath("NPCAttackComponent")
 position = Vector2(-3, 2)
 scale = Vector2(3.45, 3.45)
 sprite_frames = SubResource("SpriteFrames_a0ly1")
-animation = &"idle"
+animation = &"atk1"
 speed_scale = 2.0
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
@@ -305,6 +305,7 @@ shape = SubResource("CircleShape2D_b540y")
 
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("8_3vnf5")
+MAX_HEALTH = 10.0
 
 [node name="NPCMovementComponent" type="Node" parent="."]
 script = ExtResource("9_ntr1x")

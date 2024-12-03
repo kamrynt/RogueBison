@@ -305,6 +305,7 @@ shape = SubResource("CircleShape2D_wb2ju")
 
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("9_nmud5")
+MAX_HEALTH = 10.0
 
 [node name="NPCMovementComponent" type="Node" parent="."]
 script = ExtResource("10_pmv6i")
