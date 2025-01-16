@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dbkkdvuvew8k4"]
 
-[ext_resource type="Script" path="res://MAMAMMAMAMA/menu_scene.gd" id="1_ntg2f"]
+[ext_resource type="Script" path="res://Scenes/menu_scene.gd" id="1_ntg2f"]
 [ext_resource type="Texture2D" uid="uid://j2lkdihqklv4" path="res://assets/bisonmadness.png" id="2_8fodl"]
 [ext_resource type="FontFile" uid="uid://c2g0ehckpfmr" path="res://assets/fonts/PixelifySans-Bold.ttf" id="3_gfwjy"]
 

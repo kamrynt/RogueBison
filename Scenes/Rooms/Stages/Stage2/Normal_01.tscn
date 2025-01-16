@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=4 uid="uid://b2xq3n53p74gg"]
 
-[ext_resource type="Script" path="res://MAMAMMAMAMA/Rooms/Room.gd" id="1_ylkpr"]
-[ext_resource type="TileSet" uid="uid://d2r6muqog1lki" path="res://MAMAMMAMAMA/FloorTileSet.tres" id="2_4cf70"]
+[ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_ylkpr"]
+[ext_resource type="TileSet" uid="uid://d2r6muqog1lki" path="res://Scenes/FloorTileSet.tres" id="2_4cf70"]
 
 [node name="NormalRoom" type="Node2D"]
 script = ExtResource("1_ylkpr")

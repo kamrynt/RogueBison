@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2htwjedi8avk"]
 
 [ext_resource type="PackedScene" uid="uid://ckbhp0erdge82" path="res://Characters/base/PlayerCharacterBase.tscn" id="7_shydr"]
-[ext_resource type="Script" path="res://MAMAMMAMAMA/game_scene.gd" id="8_yvg1b"]
-[ext_resource type="Script" path="res://MAMAMMAMAMA/canvas_layer.gd" id="12_bk1xj"]
+[ext_resource type="Script" path="res://Scenes/game_scene.gd" id="8_yvg1b"]
+[ext_resource type="Script" path="res://Scenes/canvas_layer.gd" id="12_bk1xj"]
 
 [node name="Main2D" type="Node2D"]
 script = ExtResource("8_yvg1b")
