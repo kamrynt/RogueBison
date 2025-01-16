@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=4 uid="uid://b546qdlqdkfq8"]
 
-[ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_fiwmw"]
-[ext_resource type="TileSet" uid="uid://d2r6muqog1lki" path="res://Scenes/FloorTileSet.tres" id="2_r21l8"]
-[ext_resource type="Script" path="res://Scenes/Rooms/Stages/Stage1/DoorArea.gd" id="3_ojge6"]
+[ext_resource type="Script" path="res://MAMAMMAMAMA/Rooms/Room.gd" id="1_fiwmw"]
+[ext_resource type="TileSet" uid="uid://d2r6muqog1lki" path="res://MAMAMMAMAMA/FloorTileSet.tres" id="2_r21l8"]
+[ext_resource type="Script" path="res://MAMAMMAMAMA/Rooms/Stages/Stage1/DoorArea.gd" id="3_ojge6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqb4m"]
 size = Vector2(164, 70)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b7x42dan6k0jd"]
 
-[ext_resource type="Script" path="res://Scenes/options_scene.gd" id="1_b8y8e"]
-[ext_resource type="FontFile" uid="uid://c2g0ehckpfmr" path="res://assets/fonts/PixelifySans-Bold.ttf" id="2_27qdx"]
+[ext_resource type="Script" path="res://MAMAMMAMAMA/options_scene.gd" id="1_i4ly0"]
+[ext_resource type="FontFile" uid="uid://c2g0ehckpfmr" path="res://assets/fonts/PixelifySans-Bold.ttf" id="2_er03s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng4cm"]
 bg_color = Color(1, 1, 1, 1)
@@ -16,7 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_b8y8e")
+script = ExtResource("1_i4ly0")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -44,7 +44,7 @@ theme_override_constants/margin_top = 100
 [node name="Label" type="Label" parent="Menu"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_27qdx")
+theme_override_fonts/font = ExtResource("2_er03s")
 text = "Options"
 horizontal_alignment = 1
 
@@ -61,7 +61,7 @@ columns = 2
 [node name="Label2" type="Label" parent="Menu/GridContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_27qdx")
+theme_override_fonts/font = ExtResource("2_er03s")
 text = "SFX"
 
 [node name="sfxslider" type="HSlider" parent="Menu/GridContainer"]
@@ -72,7 +72,7 @@ size_flags_horizontal = 3
 [node name="Label3" type="Label" parent="Menu/GridContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_27qdx")
+theme_override_fonts/font = ExtResource("2_er03s")
 text = "Music"
 
 [node name="musicslider" type="HSlider" parent="Menu/GridContainer"]
@@ -83,7 +83,7 @@ size_flags_horizontal = 3
 [node name="Label4" type="Label" parent="Menu/GridContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_27qdx")
+theme_override_fonts/font = ExtResource("2_er03s")
 text = "Map Opacity"
 
 [node name="mapopacityslider" type="HSlider" parent="Menu/GridContainer"]
@@ -109,7 +109,7 @@ theme_override_constants/margin_bottom = 80
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0, 0.227451, 0.388235, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_27qdx")
+theme_override_fonts/font = ExtResource("2_er03s")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ktihy")
 text = "Back"
 
