@@ -9,7 +9,7 @@ script = ExtResource("8_yvg1b")
 
 [node name="Character" parent="." instance=ExtResource("7_shydr")]
 unique_name_in_owner = true
-position = Vector2(600, 361)
+position = Vector2(601, 366)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("12_bk1xj")
