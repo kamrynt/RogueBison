@@ -1,0 +1,127 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbkkdvuvew8k4"]
+
+[ext_resource type="Script" path="res://Scenes/menu_scene.gd" id="1_gbo7p"]
+[ext_resource type="Texture2D" uid="uid://dqn5xhrbl8vgk" path="res://assets/Pasted Graphic.png" id="2_601xl"]
+[ext_resource type="Texture2D" uid="uid://j2lkdihqklv4" path="res://assets/bisonmadness.png" id="2_cg2wa"]
+[ext_resource type="FontFile" uid="uid://c2g0ehckpfmr" path="res://assets/fonts/PixelifySans-Bold.ttf" id="3_54pny"]
+
+[ext_resource type="Script" path="res://Scenes/menu_scene.gd" id="1_ntg2f"]
+[ext_resource type="Texture2D" uid="uid://j2lkdihqklv4" path="res://assets/bisonmadness.png" id="2_8fodl"]
+[ext_resource type="FontFile" uid="uid://c2g0ehckpfmr" path="res://assets/fonts/PixelifySans-Bold.ttf" id="3_gfwjy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fghpp"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ol448"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibaeb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ntg2f")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fghpp")
+
+[node name="BisonHead" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 100.0
+offset_right = 1100.0
+offset_bottom = 720.0
+texture = ExtResource("2_601xl")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_right = 96.0
+offset_bottom = 444.0
+grow_horizontal = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="Menu"]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_bottom = 88
+
+[node name="TextureRect" type="TextureRect" parent="Menu/MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("2_8fodl")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="NewGameBtn" type="Button" parent="Menu"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.227451, 0.388235, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gfwjy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ol448")
+text = "New Game"
+
+[node name="ContinueBtn" type="Button" parent="Menu"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.227451, 0.388235, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gfwjy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ibaeb")
+text = "Continue"
+
+[node name="StatsBtn" type="Button" parent="Menu"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.227451, 0.388235, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gfwjy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ibaeb")
+text = "Stats"
+
+[node name="OptionsBtn" type="Button" parent="Menu"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.227451, 0.388235, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gfwjy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ibaeb")
+text = "Options"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -108.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 80
+
+[node name="ExitBtn" type="Button" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.227451, 0.388235, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gfwjy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ibaeb")
+text = "Exit"
+
+[connection signal="pressed" from="Menu/NewGameBtn" to="." method="_on_new_game_btn_pressed"]
+[connection signal="pressed" from="Menu/ContinueBtn" to="." method="_on_continue_btn_pressed"]
+[connection signal="pressed" from="Menu/StatsBtn" to="." method="_on_stats_btn_pressed"]
+[connection signal="pressed" from="Menu/OptionsBtn" to="." method="_on_options_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/ExitBtn" to="." method="_on_exit_btn_pressed"]

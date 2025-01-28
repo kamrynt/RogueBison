@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://q1u3s6mm6onb"]
+
+[ext_resource type="Script" path="res://Scenes/starting_scene.gd" id="1_5gfp5"]
+[ext_resource type="Texture2D" uid="uid://dqn5xhrbl8vgk" path="res://assets/Pasted Graphic.png" id="2_1ffow"]
+[ext_resource type="Texture2D" uid="uid://j2lkdihqklv4" path="res://assets/bisonmadness.png" id="2_4limf"]
+[ext_resource type="FontFile" uid="uid://c2g0ehckpfmr" path="res://assets/fonts/PixelifySans-Bold.ttf" id="3_pqi6o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w16du"]
+bg_color = Color(0, 0.227451, 0.388235, 1)
+corner_detail = 15
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5gfp5")
+
+[node name="WhiteBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1500.0
+offset_bottom = 1000.0
+
+[node name="BisonHead" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 80.0
+offset_top = -20.0
+offset_right = 1080.0
+offset_bottom = 700.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1ffow")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.564
+anchor_bottom = 0.512
+offset_left = 380.0
+offset_top = 80.0
+offset_right = 777.44
+offset_bottom = 339.52
+texture = ExtResource("2_4limf")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 500.0
+offset_top = 500.0
+offset_right = 696.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_pqi6o")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w16du")
+text = "Press Any Key To Start"
+icon_alignment = 1
