@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Bison Madness"
+config/name="Rogue Bison"
 run/main_scene="res://Scenes/StartingScene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
