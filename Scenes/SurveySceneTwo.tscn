@@ -1,0 +1,138 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq8g7beo6w1es"]
+
+[ext_resource type="Texture2D" uid="uid://dqn5xhrbl8vgk" path="res://assets/Pasted Graphic.png" id="1_ppktw"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1200.0
+offset_bottom = 719.0
+
+[node name="BisonHead" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -496.0
+offset_top = -360.0
+offset_right = 504.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ppktw")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.06
+anchor_bottom = 0.044
+offset_left = 240.0
+offset_top = 64.0
+offset_right = 880.0
+offset_bottom = 648.32
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Thank you for playing 
+please answer a few questions before you go"
+horizontal_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Were The Controls Easy To Use?"
+horizontal_alignment = 1
+
+[node name="Yes Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Yes                                                                                                                                                                No"
+
+[node name="sfxslider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "What Gameplay Mechanics Did You Enjoy And Which Were Confusing"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Would You Want To Replay The Game ? Why Or Why Not"
+horizontal_alignment = 1
+
+[node name="Yes Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Yes                                                                                                                                                                 No"
+
+[node name="sfxslider3" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LineEdit3" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Was The Length Of The Session Appropriate"
+horizontal_alignment = 1
+
+[node name="Yes Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Too Long                                                                                                                                             Too Short"
+
+[node name="sfxslider4" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label7" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Was The Length Of The Session Appropriate"
+horizontal_alignment = 1
+
+[node name="Yes Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Repetitive                                                                                                                                             Diverse"
+
+[node name="sfxslider5" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 616.0
+offset_right = 672.0
+offset_bottom = 672.0
+theme_override_colors/icon_hover_color = Color(0.088709, 0.328464, 0.651433, 1)
+text = "SUBMIT"
