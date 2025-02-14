@@ -1,5 +1,7 @@
 extends Node
 
+var defeated_positions = []  # List of all defeated enemy positions
+
 signal change_rooms(dir)
 
 func _init() -> void:

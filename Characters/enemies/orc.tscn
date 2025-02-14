@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://buv2yr5pw23g1"]
+[gd_scene load_steps=48 format=3 uid="uid://buv2yr5pw23g1"]
 
 [ext_resource type="Script" path="res://Characters/base/NPCCharacterBase.gd" id="1_326vf"]
 [ext_resource type="Texture2D" uid="uid://vga47y1xm6nd" path="res://assets/TinyRPG/Characters(100x100)/Orc/Orc/Orc-Attack01.png" id="2_x7b7b"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Characters/base/components/HealthComponent.gd" id="8_3vnf5"]
 [ext_resource type="Script" path="res://Characters/base/components/NPCMovementComponent.gd" id="9_ntr1x"]
 [ext_resource type="Script" path="res://Characters/base/components/NPCAttackComponent.gd" id="10_wmuoe"]
+[ext_resource type="Script" path="res://Characters/enemies/Trap.gd" id="11_udxyj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hi1h8"]
 atlas = ExtResource("2_x7b7b")
@@ -316,3 +317,10 @@ script = ExtResource("10_wmuoe")
 damage = 10.0
 cooldown = 1.0
 isProjectile = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Sprite2D"]
+script = ExtResource("11_udxyj")
