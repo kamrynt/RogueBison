@@ -31,3 +31,11 @@ func _process(delta):
     if is_on_cooldown:
         cooldown_label.text = "Cooldown: %.1f" % cooldown_timer.time_left
         cooldown_bar.value = (cooldown_timer.time_left / cooldown_timer.wait_time) * 100
+
+func _input(event):
+    if event.is_actionpressed("summon_companion")"
+        summon_companion()
+
+func _ready():
+    await get_tree().create_timer(10).timeout
+    queue_free() # Removes the companion after 10 seconds
