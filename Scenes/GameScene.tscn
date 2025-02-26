@@ -1,15 +1,141 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2htwjedi8avk"]
+[gd_scene load_steps=22 format=3 uid="uid://c2htwjedi8avk"]
 
+[ext_resource type="PackedScene" uid="uid://b02wo144fg16k" path="res://Characters/base/Companion.tscn" id="4_76gc3"]
+[ext_resource type="Script" path="res://Characters/base/companion.gd" id="5_gp4qj"]
+[ext_resource type="Texture2D" uid="uid://bqf0285rw6e1p" path="res://assets/Bonus/Characters/Cute Yui .png" id="6_41iay"]
 [ext_resource type="PackedScene" uid="uid://ckbhp0erdge82" path="res://Characters/base/PlayerCharacterBase.tscn" id="7_shydr"]
 [ext_resource type="Script" path="res://Scenes/game_scene.gd" id="8_yvg1b"]
 [ext_resource type="Script" path="res://Scenes/canvas_layer.gd" id="12_bk1xj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7basc"]
+atlas = ExtResource("6_41iay")
+region = Rect2(32, 0, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbgww"]
+atlas = ExtResource("6_41iay")
+region = Rect2(0, 0, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73ne0"]
+atlas = ExtResource("6_41iay")
+region = Rect2(32, 0, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8vuc"]
+atlas = ExtResource("6_41iay")
+region = Rect2(64, 0, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0q131"]
+atlas = ExtResource("6_41iay")
+region = Rect2(0, 66, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb7tm"]
+atlas = ExtResource("6_41iay")
+region = Rect2(32, 66, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttj3t"]
+atlas = ExtResource("6_41iay")
+region = Rect2(64, 66, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4bog"]
+atlas = ExtResource("6_41iay")
+region = Rect2(0, 132, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfguw"]
+atlas = ExtResource("6_41iay")
+region = Rect2(32, 132, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvwn0"]
+atlas = ExtResource("6_41iay")
+region = Rect2(64, 132, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3are"]
+atlas = ExtResource("6_41iay")
+region = Rect2(0, 198, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hywu8"]
+atlas = ExtResource("6_41iay")
+region = Rect2(32, 198, 32, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_514nq"]
+atlas = ExtResource("6_41iay")
+region = Rect2(64, 198, 32, 66)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_brns8"]
+animations = [{
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_7basc")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbgww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73ne0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8vuc")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0q131")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb7tm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttj3t")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4bog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfguw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvwn0")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3are")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hywu8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_514nq")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kudct"]
+size = Vector2(22, 60.75)
 
 [node name="Main2D" type="Node2D"]
 script = ExtResource("8_yvg1b")
 
 [node name="Character" parent="." instance=ExtResource("7_shydr")]
 unique_name_in_owner = true
-position = Vector2(601, 366)
+position = Vector2(601, 384)
+up_direction = Vector2(0.707107, 0.707107)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("12_bk1xj")
@@ -32,3 +158,16 @@ offset_top = 47.0
 offset_right = 41.0
 offset_bottom = 70.0
 text = "123"
+
+[node name="Companion2" parent="." instance=ExtResource("4_76gc3")]
+position = Vector2(539, 403)
+script = ExtResource("5_gp4qj")
+player = NodePath("../Character")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Companion2"]
+sprite_frames = SubResource("SpriteFrames_brns8")
+animation = &"idle_down"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Companion2"]
+position = Vector2(1, 2.625)
+shape = SubResource("RectangleShape2D_kudct")
