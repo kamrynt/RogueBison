@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bmfe235k68nkw"]
 
 [ext_resource type="Script" path="res://NonCharacters/projectile.gd" id="1_2vwy2"]
-[ext_resource type="Texture2D" uid="uid://cv1qjw666twjo" path="res://assets/ball.png" id="2_20ytf"]
+[ext_resource type="Texture2D" uid="uid://xeqdqokvdp2d" path="res://assets/Effects and Projectiles/pink/spritesheet-512px-by197px-per-frame.png" id="2_wen2h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_skmid"]
 
@@ -16,7 +16,7 @@ SPEED = 500
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -0.280924)
 scale = Vector2(0.0461216, 0.0472543)
-texture = ExtResource("2_20ytf")
+texture = ExtResource("2_wen2h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_skmid")

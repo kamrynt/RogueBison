@@ -1,27 +1,32 @@
-[gd_scene load_steps=27 format=3 uid="uid://ckbhp0erdge82"]
+[gd_scene load_steps=29 format=3 uid="uid://ckbhp0erdge82"]
 
 [ext_resource type="Script" path="res://Characters/base/PlayerCharacterBase.gd" id="1_c23e2"]
 [ext_resource type="Script" path="res://Characters/base/components/HealthComponent.gd" id="1_xatnc"]
 [ext_resource type="Texture2D" uid="uid://bqf0285rw6e1p" path="res://assets/Bonus/Characters/Cute Yui .png" id="2_twyyf"]
+[ext_resource type="Texture2D" uid="uid://d1s1yqpy2datd" path="res://Characters/base/Peri.png" id="2_xgngp"]
 [ext_resource type="Script" path="res://Characters/animated_sprite_2d.gd" id="3_d2oiq"]
 [ext_resource type="Script" path="res://Characters/base/components/UserMovementComponent.gd" id="4_86qdj"]
 [ext_resource type="Script" path="res://Characters/base/components/AttackComponent.gd" id="5_n2rma"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4kjy4"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 3, 32, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiyki"]
+atlas = ExtResource("2_xgngp")
+region = Rect2(869, 0, 79, 122)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jnko6"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 68, 32, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ys7dx"]
+atlas = ExtResource("2_xgngp")
+region = Rect2(876, 128, 73, 122)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jaqfe"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 133, 32, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2k2b"]
+atlas = ExtResource("2_xgngp")
+region = Rect2(702, 128, 78, 122)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_io4fn"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 198, 32, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ds5jj"]
+atlas = ExtResource("2_xgngp")
+region = Rect2(952, 0, 68, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puqpg"]
+atlas = ExtResource("2_xgngp")
+region = Rect2(780, 128, 78, 122)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wtlxh"]
 atlas = ExtResource("2_twyyf")
@@ -75,19 +80,27 @@ region = Rect2(65, 198, 32, 65)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4kjy4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jnko6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jaqfe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_io4fn")
+"texture": SubResource("AtlasTexture_xiyki")
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ys7dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2k2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ds5jj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puqpg")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }, {
 "frames": [{
@@ -149,7 +162,7 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mu6b"]
 resource_name = "CharacterHitbox"
-size = Vector2(23, 61)
+size = Vector2(64, 115)
 
 [sub_resource type="Animation" id="Animation_jr841"]
 resource_name = "idle"
@@ -173,7 +186,7 @@ animation = &"idle"
 script = ExtResource("3_d2oiq")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0.5)
+position = Vector2(-3, 4.5)
 shape = SubResource("RectangleShape2D_3mu6b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
