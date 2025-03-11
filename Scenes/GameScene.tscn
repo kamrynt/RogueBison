@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=3 uid="uid://c2htwjedi8avk"]
 
-[ext_resource type="PackedScene" uid="uid://b02wo144fg16k" path="res://Characters/base/Companion.tscn" id="4_76gc3"]
+[ext_resource type="PackedScene" uid="uid://cg8n3lkrccvqb" path="res://Characters/base/Companion.tscn" id="4_76gc3"]
 [ext_resource type="Script" path="res://Characters/base/companion.gd" id="5_gp4qj"]
 [ext_resource type="Texture2D" uid="uid://bljaopngrjvbv" path="res://assets/Bison Buck Spritesheet.png" id="6_jbvi3"]
 [ext_resource type="PackedScene" uid="uid://ckbhp0erdge82" path="res://Characters/base/PlayerCharacterBase.tscn" id="7_shydr"]
@@ -231,7 +231,9 @@ script = ExtResource("8_yvg1b")
 
 [node name="Character" parent="." instance=ExtResource("7_shydr")]
 unique_name_in_owner = true
+z_index = 9
 position = Vector2(428, 466)
+collision_layer = 241
 up_direction = Vector2(0.707107, 0.707107)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -269,5 +271,6 @@ animation = &"walk_left"
 frame_progress = 0.0882173
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Companion2"]
+z_index = 10
 position = Vector2(79, 91)
 shape = SubResource("RectangleShape2D_kudct")
