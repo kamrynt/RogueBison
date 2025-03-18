@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cg8n3lkrccvqb"]
+[gd_scene format=3 uid="uid://b80ytb77nvirg"]
 
 [node name="Companion" type="CharacterBody2D"]
 collision_layer = 2
