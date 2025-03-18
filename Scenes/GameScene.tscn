@@ -233,7 +233,8 @@ script = ExtResource("8_yvg1b")
 unique_name_in_owner = true
 z_index = 9
 position = Vector2(428, 466)
-collision_layer = 241
+collision_layer = 2
+collision_mask = 5
 up_direction = Vector2(0.707107, 0.707107)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
