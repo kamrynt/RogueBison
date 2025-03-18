@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://c2htwjedi8avk"]
+[gd_scene load_steps=50 format=3 uid="uid://c2htwjedi8avk"]
 
 [ext_resource type="PackedScene" uid="uid://b02wo144fg16k" path="res://Characters/base/Companion.tscn" id="4_76gc3"]
 [ext_resource type="Script" path="res://Characters/base/companion.gd" id="5_gp4qj"]
@@ -6,6 +6,54 @@
 [ext_resource type="PackedScene" uid="uid://ckbhp0erdge82" path="res://Characters/base/PlayerCharacterBase.tscn" id="7_shydr"]
 [ext_resource type="Script" path="res://Scenes/game_scene.gd" id="8_yvg1b"]
 [ext_resource type="Script" path="res://Scenes/canvas_layer.gd" id="12_bk1xj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1nff"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(1820, 0, 910, 798)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tesa"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(2730, 0, 910, 798)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v4ro"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(3640, 0, 910, 798)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjyoj"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(4550, 0, 910, 798)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxfpx"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(5460, 0, 910, 798)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3y6wk"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(6370, 0, 910, 798)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_642vp"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(8190, 0, 910, 798)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0d6n"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(4550, 798, 910, 798)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhcy8"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(5460, 798, 910, 798)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1l6w6"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(6370, 798, 910, 798)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2h52"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(7280, 798, 910, 798)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmxgq"]
+atlas = ExtResource("6_jbvi3")
+region = Rect2(8190, 798, 910, 798)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_77dli"]
 atlas = ExtResource("6_jbvi3")
@@ -127,6 +175,52 @@ region = Rect2(0, 3990, 910, 798)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_e1nff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tesa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7v4ro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjyoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxfpx")
+}],
+"loop": true,
+"name": &"back_kick",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3y6wk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_642vp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0d6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhcy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1l6w6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2h52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmxgq")
+}],
+"loop": true,
+"name": &"horn_attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_77dli")
 }, {
 "duration": 1.0,
@@ -224,7 +318,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kudct"]
-size = Vector2(94, 62)
+size = Vector2(96, 62)
 
 [node name="Main2D" type="Node2D"]
 script = ExtResource("8_yvg1b")
@@ -260,14 +354,18 @@ text = "123"
 position = Vector2(539, 403)
 script = ExtResource("5_gp4qj")
 player = NodePath("../Character")
+follow_distance = 10.0
+speed = 270.0
 
 [node name="BisonSprite" type="AnimatedSprite2D" parent="Companion2"]
 position = Vector2(85, 79)
 scale = Vector2(0.147253, 0.119048)
 sprite_frames = SubResource("SpriteFrames_brns8")
-animation = &"walk_left"
-frame_progress = 0.0882173
+animation = &"horn_attack"
+frame_progress = 0.879631
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Companion2"]
-position = Vector2(79, 91)
+position = Vector2(78, 91)
 shape = SubResource("RectangleShape2D_kudct")
+
+[node name="Timer" type="Timer" parent="Companion2"]

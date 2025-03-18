@@ -25,7 +25,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_b540y"]
 radius = 27.0185
 
-[node name="Orc" type="CharacterBody2D" node_paths=PackedStringArray("healthNode", "movementNode", "attackNode")]
+[node name="Orc" type="CharacterBody2D" node_paths=PackedStringArray("healthNode", "movementNode", "attackNode") groups=["enemies"]]
 collision_layer = 2
 collision_mask = 6
 script = ExtResource("1_3yddv")
@@ -38,6 +38,7 @@ material = SubResource("ShaderMaterial_7bbgp")
 scale = Vector2(0.02, 0.02)
 sprite_frames = SubResource("SpriteFrames_a0ly1")
 animation = &"new_animation"
+frame_progress = 0.493628
 speed_scale = 2.0
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
