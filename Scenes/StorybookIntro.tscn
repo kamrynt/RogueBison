@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bol5uhjy5qbe1"]
+[gd_scene load_steps=19 format=3 uid="uid://c8hsvn0roa735"]
 
 [ext_resource type="Script" path="res://Scenes/storybook_intro.gd" id="1_ndhj7"]
 [ext_resource type="Texture2D" uid="uid://meuvlnyxdlas" path="res://assets/vecteezy_paper-mockup-watercolor-a4-paper-with-black-pencils-on-dark_50547297.JPG" id="1_x2qpt"]
