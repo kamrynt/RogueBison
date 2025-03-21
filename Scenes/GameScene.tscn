@@ -1,6 +1,6 @@
 [gd_scene load_steps=50 format=3 uid="uid://c2htwjedi8avk"]
 
-[ext_resource type="PackedScene" uid="uid://b5ymwwrsma88b" path="res://Characters/base/Companion.tscn" id="4_76gc3"]
+[ext_resource type="PackedScene" uid="uid://bxf1l08yr42wv" path="res://Characters/base/Companion.tscn" id="4_76gc3"]
 [ext_resource type="Script" path="res://Characters/base/companion.gd" id="5_gp4qj"]
 [ext_resource type="Texture2D" uid="uid://bljaopngrjvbv" path="res://assets/Bison Buck Spritesheet.png" id="6_jbvi3"]
 [ext_resource type="PackedScene" uid="uid://ckbhp0erdge82" path="res://Characters/base/PlayerCharacterBase.tscn" id="7_shydr"]
