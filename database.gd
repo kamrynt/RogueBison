@@ -40,12 +40,14 @@ func create_new_character(player_id: String, name: String) -> bool:
 		"intelligence": 5,  # Base magic/ability stat
 		"stamina": 5,  # Base speed/movement stat
 		"currency": 0,  # Starting with 0 coins
-		"inventory": "[]"  # Empty inventory as JSON string
+		"inventory": "[]",  # Empty inventory as JSON string
+		"last_room": "storybook_intro",  # Start at storybook intro for new games
+		"last_position": "{}"  # Empty position data as JSON string
 	}
 	
 	var query = """
-	INSERT INTO MainCharacter (PlayerID, Name, Level, Health, Experience, Strength, Intelligence, Stamina, Currency, Inventory)
-	VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+	INSERT INTO MainCharacter (PlayerID, Name, Level, Health, Experience, Strength, Intelligence, Stamina, Currency, Inventory, LastRoom, LastPosition)
+	VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
 	"""
 	
 	var params = [
@@ -58,11 +60,52 @@ func create_new_character(player_id: String, name: String) -> bool:
 		base_stats.intelligence,
 		base_stats.stamina,
 		base_stats.currency,
-		base_stats.inventory
+		base_stats.inventory,
+		base_stats.last_room,
+		base_stats.last_position
 	]
 	
 	var result = connection.query(query, params)
 	return result == OK
+
+func save_player_position(character_id: int, room_name: String, position_data: Dictionary) -> bool:
+	if not connected:
+		return false
+		
+	var query = """
+	UPDATE MainCharacter 
+	SET LastRoom = $1, LastPosition = $2
+	WHERE CharacterID = $3
+	"""
+	
+	var params = [
+		room_name,
+		JSON.stringify(position_data),
+		character_id
+	]
+	
+	var result = connection.query(query, params)
+	return result == OK
+
+func get_player_position(character_id: int) -> Dictionary:
+	if not connected:
+		return {}
+		
+	var query = """
+	SELECT LastRoom, LastPosition FROM MainCharacter WHERE CharacterID = $1
+	"""
+	
+	var params = [character_id]
+	var result = connection.query(query, params)
+	
+	if result == OK:
+		var data = connection.get_result()
+		if data.size() > 0:
+			var position_data = {}
+			position_data.room = data[0].LastRoom
+			position_data.position = JSON.parse(data[0].LastPosition)
+			return position_data
+	return {}
 
 func get_character(character_id: int) -> Dictionary:
 	if not connected:
