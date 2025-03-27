@@ -1,90 +1,37 @@
-[gd_scene load_steps=27 format=3 uid="uid://ckbhp0erdge82"]
+[gd_scene load_steps=16 format=3 uid="uid://ckbhp0erdge82"]
 
 [ext_resource type="Script" path="res://Characters/base/PlayerCharacterBase.gd" id="1_c23e2"]
 [ext_resource type="Script" path="res://Characters/base/components/HealthComponent.gd" id="1_xatnc"]
-[ext_resource type="Texture2D" uid="uid://bqf0285rw6e1p" path="res://assets/Bonus/Characters/Cute Yui .png" id="2_twyyf"]
+[ext_resource type="Texture2D" uid="uid://bbbayuoo5h5v1" path="res://assets/Peri.png" id="2_sywti"]
 [ext_resource type="Script" path="res://Characters/animated_sprite_2d.gd" id="3_d2oiq"]
 [ext_resource type="Script" path="res://Characters/base/components/UserMovementComponent.gd" id="4_86qdj"]
 [ext_resource type="Script" path="res://Characters/base/components/AttackComponent.gd" id="5_n2rma"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4kjy4"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 3, 32, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vfve"]
+atlas = ExtResource("2_sywti")
+region = Rect2(865, 0, 78, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jnko6"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 68, 32, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_neuop"]
+atlas = ExtResource("2_sywti")
+region = Rect2(943, 0, 78, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jaqfe"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 133, 32, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_kund0"]
+atlas = ExtResource("2_sywti")
+region = Rect2(709, 128, 78, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_io4fn"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 198, 32, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kshn"]
+atlas = ExtResource("2_sywti")
+region = Rect2(787, 128, 78, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wtlxh"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(1, 3, 32, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_085jb"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 3, 32, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_berlo"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(65, 3, 32, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4f8om"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(1, 68, 32, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v67nd"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 68, 32, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gp42a"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(65, 68, 32, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e7y7c"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(1, 133, 32, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hfkke"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 133, 32, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_24t17"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(65, 133, 32, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_82j6s"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(1, 198, 32, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_niy5l"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(33, 198, 32, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qjxdb"]
-atlas = ExtResource("2_twyyf")
-region = Rect2(65, 198, 32, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnrtj"]
+atlas = ExtResource("2_sywti")
+region = Rect2(865, 128, 78, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b2fr1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4kjy4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jnko6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jaqfe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_io4fn")
+"texture": SubResource("AtlasTexture_2vfve")
 }],
 "loop": true,
 "name": &"idle",
@@ -92,64 +39,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wtlxh")
+"texture": SubResource("AtlasTexture_neuop")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_085jb")
+"texture": SubResource("AtlasTexture_kund0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_berlo")
-}],
-"loop": true,
-"name": &"walk_down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4f8om")
+"texture": SubResource("AtlasTexture_1kshn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v67nd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gp42a")
-}],
-"loop": true,
-"name": &"walk_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e7y7c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hfkke")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_24t17")
+"texture": SubResource("AtlasTexture_dnrtj")
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_82j6s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_niy5l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qjxdb")
-}],
-"loop": true,
-"name": &"walk_up",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mu6b"]
 resource_name = "CharacterHitbox"
-size = Vector2(23, 61)
+size = Vector2(43.5, 73)
 
 [sub_resource type="Animation" id="Animation_jr841"]
 resource_name = "idle"
@@ -168,12 +76,16 @@ movementNode = NodePath("UserMovementComponent")
 attackNode = NodePath("AttackComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-15.5, -26)
+scale = Vector2(0.602564, 0.59375)
 sprite_frames = SubResource("SpriteFrames_b2fr1")
-animation = &"idle"
+animation = &"walk_right"
+frame = 1
+frame_progress = 0.731372
 script = ExtResource("3_d2oiq")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0.5)
+position = Vector2(-15.75, -24.5)
 shape = SubResource("RectangleShape2D_3mu6b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

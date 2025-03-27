@@ -1,0 +1,136 @@
+[gd_scene load_steps=19 format=3 uid="uid://cojm51s6dhlj"]
+
+[ext_resource type="Script" path="res://Scenes/storybook_intro.gd" id="1_ndhj7"]
+[ext_resource type="Texture2D" uid="uid://meuvlnyxdlas" path="res://assets/vecteezy_paper-mockup-watercolor-a4-paper-with-black-pencils-on-dark_50547297.JPG" id="1_x2qpt"]
+[ext_resource type="Texture2D" uid="uid://cnofnqe33mwwv" path="res://assets/Clock tower Background Removed.png" id="2_vr1o1"]
+[ext_resource type="Texture2D" uid="uid://bce1p3q44tdv3" path="res://assets/Family_Portrait-removebg-preview.png" id="3_e2ig4"]
+[ext_resource type="Shader" path="res://soft_edge_wobble.gdshader" id="3_lrbfb"]
+[ext_resource type="Shader" path="res://wobble_shader.gdshader" id="3_tiitl"]
+[ext_resource type="Texture2D" uid="uid://f7bd5v06d3rx" path="res://assets/Orientation.jpeg" id="4_vl2tm"]
+[ext_resource type="Texture2D" uid="uid://cosnfh8j2jsje" path="res://assets/mascots appear.jpeg" id="5_6ijhg"]
+[ext_resource type="Texture2D" uid="uid://eu2dg6h7dt82" path="res://assets/mascots steal.jpeg" id="6_g7yei"]
+[ext_resource type="Texture2D" uid="uid://dp5wabvufj0b1" path="res://assets/Convincing_peers-removebg-preview.png" id="7_1oaq0"]
+[ext_resource type="Texture2D" uid="uid://l747e1wkxi3d" path="res://assets/Calling_grandma_Background_Removed-removebg-preview.png" id="8_mvxq8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eofhk"]
+shader = ExtResource("3_tiitl")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_alkqn"]
+shader = ExtResource("3_tiitl")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vijp6"]
+shader = ExtResource("3_lrbfb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_plka3"]
+shader = ExtResource("3_lrbfb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mqe74"]
+shader = ExtResource("3_lrbfb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vjs7c"]
+shader = ExtResource("3_lrbfb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t5ouk"]
+shader = ExtResource("3_lrbfb")
+
+[node name="Storybook" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ndhj7")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1200.0
+offset_bottom = 700.0
+texture = ExtResource("1_x2qpt")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PageContainer" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Page1" type="TextureRect" parent="PageContainer"]
+modulate = Color(1, 1, 1, 0.00392157)
+material = SubResource("ShaderMaterial_eofhk")
+layout_mode = 0
+offset_left = 100.0
+offset_top = 50.0
+offset_right = 813.0
+offset_bottom = 598.0
+texture = ExtResource("2_vr1o1")
+stretch_mode = 5
+
+[node name="Page2" type="TextureRect" parent="PageContainer"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_alkqn")
+layout_mode = 0
+offset_left = 200.0
+offset_top = 50.0
+offset_right = 700.0
+offset_bottom = 550.0
+texture = ExtResource("3_e2ig4")
+stretch_mode = 5
+
+[node name="Page3" type="TextureRect" parent="PageContainer"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_vijp6")
+layout_mode = 0
+offset_left = 250.0
+offset_top = 150.0
+offset_right = 700.0
+offset_bottom = 500.0
+texture = ExtResource("4_vl2tm")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Page4" type="TextureRect" parent="PageContainer"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_plka3")
+layout_mode = 0
+offset_left = 250.0
+offset_top = 150.0
+offset_right = 700.0
+offset_bottom = 500.0
+texture = ExtResource("5_6ijhg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Page5" type="TextureRect" parent="PageContainer"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_mqe74")
+layout_mode = 0
+offset_left = 250.0
+offset_top = 150.0
+offset_right = 700.0
+offset_bottom = 500.0
+texture = ExtResource("6_g7yei")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Page6" type="TextureRect" parent="PageContainer"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_vjs7c")
+layout_mode = 0
+offset_left = 250.0
+offset_top = 150.0
+offset_right = 700.0
+offset_bottom = 500.0
+texture = ExtResource("7_1oaq0")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Page7" type="TextureRect" parent="PageContainer"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_t5ouk")
+layout_mode = 0
+offset_left = 250.0
+offset_top = 150.0
+offset_right = 700.0
+offset_bottom = 500.0
+texture = ExtResource("8_mvxq8")
+expand_mode = 1
+stretch_mode = 6

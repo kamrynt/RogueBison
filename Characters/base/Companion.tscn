@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bxf1l08yr42wv"]
+
+[node name="Companion" type="CharacterBody2D"]
