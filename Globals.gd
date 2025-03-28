@@ -1,6 +1,7 @@
 extends Node
 
 signal change_rooms(dir)
+signal hoverItem(item)
 
 func _init() -> void:
 	seed("Howard Bison Madness".hash())

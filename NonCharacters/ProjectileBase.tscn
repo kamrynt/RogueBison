@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cq2neqjsstjfe"]
+
+[ext_resource type="Script" path="res://NonCharacters/ProjectileBase.gd" id="1_yf2jj"]
+[ext_resource type="Texture2D" uid="uid://cv1qjw666twjo" path="res://assets/ball.png" id="2_3cqpl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fwm30"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1eq6i"]
+
+[node name="ProjectileBase" type="CharacterBody2D"]
+collision_mask = 0
+script = ExtResource("1_yf2jj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -0.280924)
+scale = Vector2(0.0461216, 0.0472543)
+texture = ExtResource("2_3cqpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fwm30")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_1eq6i")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,9 +1,13 @@
+
 [gd_scene load_steps=22 format=4 uid="uid://b546qdlqdkfq8"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_fiwmw"]
 [ext_resource type="TileSet" uid="uid://d2r6muqog1lki" path="res://Scenes/FloorTileSet.tres" id="2_r21l8"]
 [ext_resource type="Script" path="res://Scenes/Rooms/Stages/Stage1/DoorArea.gd" id="3_ojge6"]
+
+[ext_resource type="PackedScene" uid="uid://c6jlasskvbggk" path="res://NonCharacters/Items/testitem/testitem.tscn" id="4_337kq"]
 [ext_resource type="Texture2D" uid="uid://cav4gp7iaopc5" path="res://assets/SchoolTileset/SchoolTileset/RPGMaker/$School_Door_32.png" id="4_n84mw"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqb4m"]
 size = Vector2(164, 84.3094)
@@ -162,6 +166,9 @@ script = ExtResource("3_ojge6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightBox"]
 shape = SubResource("RectangleShape2D_i78nc")
+
+[node name="Item" parent="." instance=ExtResource("4_337kq")]
+position = Vector2(948, 195)
 
 [connection signal="body_entered" from="TopBox" to="." method="_on_top_box_body_entered"]
 [connection signal="body_exited" from="TopBox" to="." method="_on_top_box_body_exited"]
