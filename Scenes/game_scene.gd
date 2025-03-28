@@ -17,6 +17,7 @@ func _ready() -> void:
 	
 	mapGenerator.spawnRoom.setActive(%Character)
 	Globals.change_rooms.connect(handleRoomChange)
+	Globals.hoverItem.connect(handleHoverItem)
 	pass # Replace with function body.
 
 func handleRoomChange(dir):
@@ -31,7 +32,9 @@ func handleRoomChange(dir):
 		get_node("Character").global_position = pos
 		print(adjRoom)
 
-
+func handleHoverItem(item: ItemBase):
+	if item != null:
+		print(item.itemName)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
