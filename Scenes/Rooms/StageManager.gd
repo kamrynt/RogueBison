@@ -1,7 +1,6 @@
 extends Resource
 
 var mazeGenerator: MazeGenerator = preload("res://Scenes/Rooms/MazeGenerator.gd").new()
-var tutorial_scene: PackedScene = preload("res://Scenes/Rooms/TutorialScene.tscn")
 @export var width: int = 9
 @export var height: int = 5
 @export var spawnRoomCoords: Vector2 = Vector2(-1,-1)
@@ -13,7 +12,9 @@ var tutorial_scene: PackedScene = preload("res://Scenes/Rooms/TutorialScene.tscn
 var spawnRoom: Room
 var currentRoom: Room
 var rooms: Dictionary = {}
-
+var normal_room_paths: Array[String] = []
+var boss_room_path: String
+var reward_room_path: String
 func _init(w = null,h = null) -> void:
 	if w != null:
 		width = w
@@ -30,8 +31,23 @@ func getAdjacentRoom(dir):
 	var y = currentRoom.coordinate.y + Globals.DY[dir]
 	var coord_key = str(x) + "," + str(y)
 	return rooms[coord_key]
-
-func generate():
+	
+# generate and return node that contains the map of the entire stage
+# takes in path to stage folder to generate maps out of
+func generate(stageName):
+	if stageName == "Stage1":
+		var path = "res://Scenes/Rooms/Stages/Stage1/"
+		normal_room_paths = [
+			path + "Normal_01.tscn",
+			path + "Normal_02.tscn",
+			path + "Normal_03.tscn"
+		]
+		boss_room_path = path + "BossRoom.tscn"
+		reward_room_path = path + "RewardRoom.tscn"
+	elif stageName == "Stage2":
+		pass
+	else:
+		print("stageName not set in StageManager.generate")
 	var succ = _generate(0)
 	var counter = 0
 	while !succ and counter < 100:
@@ -40,13 +56,23 @@ func generate():
 		succ = _generate(0)
 	return buildScene()
 	
+	
 func buildScene():
 	var root = Node2D.new()
+	print(rewardRoomCoords)
 	for y in height:
 		for x in width:
-			if mazeGenerator.grid[y][x] != 0: 
-				var room: Room = load("res://Scenes/Rooms/Stages/Stage1/Normal_01.tscn").instantiate()
+			if mazeGenerator.grid[y][x] != 0:
 				
+				var randRoom = normal_room_paths.pick_random()
+				
+				if bossRoomCoords == Vector2(x,y):
+					randRoom = boss_room_path
+				elif rewardRoomCoords == Vector2(x,y):
+					randRoom = reward_room_path
+				
+				var room: Room = load(randRoom).instantiate()
+					
 				room.coordinate = Vector2(x,y)
 				room.value = mazeGenerator.grid[y][x]
 				room.position = Vector2(x,y) - spawnRoomCoords

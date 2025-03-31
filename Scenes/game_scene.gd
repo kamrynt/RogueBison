@@ -2,12 +2,12 @@
 extends Node2D
 @onready var main = get_tree().get_root().get_node("Main2D")
 
-var mapGenerator = preload("res://Scenes/Rooms/MapGenerator.gd").new()
+var stageManager = preload("res://Scenes/Rooms/StageManager.gd").new()
 var roomChangeMinDelay = 0.5
 var roomChangeTimer = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var generated_scene = mapGenerator.generate()
+	var generated_scene = stageManager.generate("Stage1")
 	var current_scene = get_tree().current_scene
 	if current_scene:
 		current_scene.add_child(generated_scene)
@@ -15,7 +15,7 @@ func _ready() -> void:
 	else:
 		print("No current scene found.")
 	
-	mapGenerator.spawnRoom.setActive(%Character)
+	stageManager.spawnRoom.setActive(%Character)
 	Globals.change_rooms.connect(handleRoomChange)
 	Globals.hoverItem.connect(handleHoverItem)
 	pass # Replace with function body.
@@ -23,10 +23,10 @@ func _ready() -> void:
 func handleRoomChange(dir):
 	if roomChangeTimer > 0: return
 	roomChangeTimer = roomChangeMinDelay
-	var adjRoom = mapGenerator.getAdjacentRoom(dir)
+	var adjRoom = stageManager.getAdjacentRoom(dir)
 	if adjRoom is Room:
-		mapGenerator.currentRoom.setInactive()
-		mapGenerator.currentRoom = adjRoom
+		stageManager.currentRoom.setInactive()
+		stageManager.currentRoom = adjRoom
 		adjRoom.setActive(%Character)
 		var pos = adjRoom.getDirCoords(Globals.OPPOSITE[dir])
 		get_node("Character").global_position = pos
