@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://c2b7e3okayaq5"]
+[gd_scene load_steps=11 format=4 uid="uid://br5y3pavny6tw"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_q2c7o"]
 [ext_resource type="Texture2D" uid="uid://i6t7u0nwqvh5" path="res://assets/Enviornment/top_down_environment_pack.svg" id="2_3agfx"]
