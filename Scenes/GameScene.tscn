@@ -1,5 +1,6 @@
-[gd_scene load_steps=51 format=3 uid="uid://c2htwjedi8avk"]
+[gd_scene load_steps=52 format=3 uid="uid://c2htwjedi8avk"]
 
+[ext_resource type="Script" path="res://Characters/base/player_character_base.gd" id="3_h8vtb"]
 [ext_resource type="PackedScene" uid="uid://dpr0cu7nvinl2" path="res://NonCharacters/Items/tempweapon/tempweapon.tscn" id="3_tctmw"]
 [ext_resource type="PackedScene" uid="uid://bxf1l08yr42wv" path="res://Characters/base/Companion.tscn" id="4_76gc3"]
 [ext_resource type="Script" path="res://Characters/base/companion.gd" id="5_gp4qj"]
@@ -324,17 +325,20 @@ size = Vector2(96, 62)
 [node name="Main2D" type="Node2D"]
 script = ExtResource("8_yvg1b")
 
-[node name="Character" parent="." node_paths=PackedStringArray("weapon") instance=ExtResource("7_shydr")]
+[node name="Character" parent="." instance=ExtResource("7_shydr")]
 unique_name_in_owner = true
 position = Vector2(428, 466)
 collision_mask = 6
 up_direction = Vector2(0.707107, 0.707107)
-weapon = NodePath("Tempweapon")
+script = ExtResource("3_h8vtb")
 
 [node name="Tempweapon" parent="Character" node_paths=PackedStringArray("parent") instance=ExtResource("3_tctmw")]
 parent = NodePath("..")
 cooldown = 0.1
 damage = 1000.0
+
+[node name="InspectRay" type="RayCast3D" parent="Character"]
+target_position = Vector3(0, 0, -2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("12_bk1xj")
