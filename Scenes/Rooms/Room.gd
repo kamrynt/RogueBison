@@ -1,7 +1,7 @@
 extends Node2D
 class_name Room
 
-@onready var enemy = load("res://Characters/enemies/robot.tscn")
+#@onready var enemy = load("res://Characters/enemies/robot.tscn")
 @onready var main = get_tree().get_root().get_node("Main2D")
 
 enum DoorEnum {NoDoor, NormalDoor, BossDoor, HiddenDoor}
@@ -17,14 +17,14 @@ func _ready() -> void:
 	# spawns monsters
 	pass
 
-func spawnMonsters(target):
-	if main != null and !cleared:
-		for i in range(10):
-			var instance: NPCCharacterBase = enemy.instantiate()
-			instance.set_target(target)
-			instance.global_position = Vector2(randi_range(150, 300),randi_range(150, 300)) + global_position
-			main.add_child.call_deferred(instance)
-			monsters.append(instance)
+#func spawnMonsters(target):
+	#if main != null and !cleared:
+		#for i in range(10):
+			#var instance: NPCCharacterBase = enemy.instantiate()
+			#instance.set_target(target)
+			#instance.global_position = Vector2(randi_range(150, 300),randi_range(150, 300)) + global_position
+			#main.add_child.call_deferred(instance)
+			#monsters.append(instance)
 func destroyMonsters():
 	for monster in monsters:
 		if monster != null:
@@ -53,7 +53,7 @@ func setInactive():
 	cam.enabled = false
 
 func setActive(target):
-	spawnMonsters(target)
+	#spawnMonsters(target)
 	var cam = get_node("Camera2D")
 	cam.enabled = true
 	cam.make_current()
