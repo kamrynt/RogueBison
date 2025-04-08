@@ -36,3 +36,7 @@ func _enter_state(new_state, old_state):
 	
 func _exit_state(old_state,new_state):
 	pass
+func heal_to_full():
+	health = MAX_HEALTH
+	set_state("healed")
+	emit_signal("health_signal", state)

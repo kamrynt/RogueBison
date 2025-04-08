@@ -1,16 +1,17 @@
 extends CharacterBody2D
 
 @export var player: NodePath
-@export var follow_distance: float = 80.0
+@export var follow_distance: float = 10.0
 @export var speed: float = 100.0
 @export var attack_range: float = 150.0
 @export var attack_contact_range: float = 30.0
 @export var attack_cooldown: float = 1.5
 @export var horn_damage: float = 50.0
 @export var kick_damage: float = 70.0
+@export var mode: String = "attacker"  # Default to attacker
 
-@onready var sprite = $BisonSprite
-@onready var attack_timer: Timer = $Timer
+@onready var sprite = $BisonSprite2
+@onready var attack_timer: Timer = $Timer2
 
 var player_node: CharacterBody2D
 var target_enemy: CharacterBody2D = null
@@ -25,6 +26,8 @@ func _ready():
 	attack_timer.timeout.connect(Callable(self, "_on_attack_timer_timeout"))
 
 func _process(delta):
+	if mode != "attacker":
+		return
 	if attacking:
 		return
 
