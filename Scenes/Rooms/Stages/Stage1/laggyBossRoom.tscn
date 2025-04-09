@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://br5y3pavny6tw"]
+[gd_scene load_steps=11 format=4 uid="uid://bhah516xvxhtp"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_q2c7o"]
 [ext_resource type="Texture2D" uid="uid://i6t7u0nwqvh5" path="res://assets/Enviornment/top_down_environment_pack.svg" id="2_3agfx"]
@@ -33824,7 +33824,7 @@ size = Vector2(74, 148)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i78nc"]
 size = Vector2(68, 140)
 
-[node name="NormalRoom" type="Node2D"]
+[node name="NormalRoom2" type="Node2D"]
 script = ExtResource("1_q2c7o")
 
 [node name="FloorLayer" type="TileMapLayer" parent="."]

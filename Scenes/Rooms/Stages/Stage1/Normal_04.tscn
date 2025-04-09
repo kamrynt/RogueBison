@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://dcg1nt75kq61s"]
+[gd_scene load_steps=18 format=4 uid="uid://cplx4tkxxr5ku"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_2jjo5"]
 [ext_resource type="Script" path="res://Scenes/Rooms/Stages/Stage1/DoorArea.gd" id="2_nuypn"]
@@ -19818,7 +19818,7 @@ size = Vector2(74, 148)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i78nc"]
 size = Vector2(68, 140)
 
-[node name="NormalRoom" type="Node2D"]
+[node name="NormalRoom3" type="Node2D"]
 script = ExtResource("1_2jjo5")
 
 [node name="FloorLayer" type="TileMapLayer" parent="."]

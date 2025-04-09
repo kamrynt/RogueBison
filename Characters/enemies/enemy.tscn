@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2tf1jt3wva83"]
+[gd_scene load_steps=4 format=3 uid="uid://d31op18af0unc"]
 
 [ext_resource type="Texture2D" uid="uid://uej0mv5l57im" path="res://assets/—Pngtree—full body robot character with_19287158.png" id="1_nhhff"]
 [ext_resource type="Script" path="res://Characters/enemies/enemy.gd" id="2_3ewsk"]

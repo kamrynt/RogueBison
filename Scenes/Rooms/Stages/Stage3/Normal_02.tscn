@@ -8760,7 +8760,7 @@ size = Vector2(74, 148)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7j04"]
 size = Vector2(68, 140)
 
-[node name="NormalRoom" type="Node2D"]
+[node name="NormalRoom2" type="Node2D"]
 script = ExtResource("1_wah2i")
 
 [node name="FloorLayer" type="TileMapLayer" parent="."]

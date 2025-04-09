@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bm17d3yc6kr5b"]
+[gd_scene load_steps=5 format=3 uid="uid://om5hamwsgtt5"]
 
 [ext_resource type="Script" path="res://NonCharacters/ItemBase.gd" id="1_wxato"]
 [ext_resource type="Texture2D" uid="uid://dnt6birm7rf4w" path="res://assets/Items/16x16 RPG Item Pack/Item__36.png" id="2_iytnn"]

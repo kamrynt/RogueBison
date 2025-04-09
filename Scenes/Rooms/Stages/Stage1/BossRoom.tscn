@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://c2b7e3okayaq5"]
+[gd_scene load_steps=18 format=4 uid="uid://drtysht8wh26l"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_q2c7o"]
 [ext_resource type="Texture2D" uid="uid://cxfnxq1nrdgbp" path="res://assets/gpt tilesets/yard/ChatGPT Image Apr 1 2025 (1).png" id="2_k5d3x"]
@@ -32815,7 +32815,7 @@ size = Vector2(74, 148)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i78nc"]
 size = Vector2(68, 140)
 
-[node name="NormalRoom2" type="Node2D"]
+[node name="NormalRoom3" type="Node2D"]
 script = ExtResource("1_q2c7o")
 
 [node name="FloorLayer" type="TileMapLayer" parent="."]

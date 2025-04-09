@@ -7,7 +7,7 @@ var companion_instance: Node = null
 @onready var player = %Character  # Or use $Character if not using unique names
 @onready var companion_ui = $SummonUI
 
-var mapGenerator = preload("res://Scenes/Rooms/MapGenerator.gd").new()
+var mapGenerator = preload("res://Scenes/Rooms/StageManager.gd").new()
 var roomChangeMinDelay := 0.5
 var roomChangeTimer := 0.0
 
@@ -19,7 +19,7 @@ var waves := [5, 4, 3, 3, 3, 2]
 var current_wave := 0
 
 func _ready() -> void:
-	var generated_scene = mapGenerator.generate()
+	var generated_scene = mapGenerator.generate('Stage1')
 	var current_scene = get_tree().current_scene
 	if current_scene:
 		current_scene.add_child(generated_scene)
