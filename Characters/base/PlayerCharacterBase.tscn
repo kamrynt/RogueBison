@@ -57,7 +57,7 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mu6b"]
 resource_name = "CharacterHitbox"
-size = Vector2(43.5, 73)
+size = Vector2(31, 72)
 
 [sub_resource type="Animation" id="Animation_jr841"]
 resource_name = "idle"
@@ -80,11 +80,11 @@ position = Vector2(-15.5, -26)
 scale = Vector2(0.602564, 0.59375)
 sprite_frames = SubResource("SpriteFrames_b2fr1")
 animation = &"walk_right"
-frame_progress = 0.45675
+frame_progress = 0.49846
 script = ExtResource("3_d2oiq")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-15.75, -24.5)
+position = Vector2(-10.5, -27)
 shape = SubResource("RectangleShape2D_3mu6b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

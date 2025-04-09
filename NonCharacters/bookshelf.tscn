@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy7ehgclfgvrb"]
+
+[ext_resource type="Texture2D" uid="uid://dsqmxssntv782" path="res://assets/SchoolTileset/SchoolTileset/school_tileset.png" id="1_m0mt5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyptb"]
+size = Vector2(257, 230.5)
+
+[node name="Bookshelf" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(98.75, 89.25)
+scale = Vector2(5.20213, 6.40909)
+texture = ExtResource("1_m0mt5")
+region_enabled = true
+region_rect = Rect2(255.724, 183.944, 47.0705, 33.3072)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(98.5, 88.75)
+shape = SubResource("RectangleShape2D_lyptb")

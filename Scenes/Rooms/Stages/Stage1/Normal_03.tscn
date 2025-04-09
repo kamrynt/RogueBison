@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://b3d0xku2migpv"]
+[gd_scene load_steps=22 format=4 uid="uid://b8al2ovvkxea6"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_abyod"]
 [ext_resource type="TileSet" uid="uid://d2r6muqog1lki" path="res://Scenes/FloorTileSet.tres" id="2_mue7p"]
@@ -109,7 +109,7 @@ size = Vector2(74, 148)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i78nc"]
 size = Vector2(68, 140)
 
-[node name="NormalRoom" type="Node2D"]
+[node name="NormalRoom3" type="Node2D"]
 script = ExtResource("1_abyod")
 
 [node name="FloorLayer" type="TileMapLayer" parent="."]
@@ -133,7 +133,7 @@ position = Vector2(599.48, 143.696)
 script = ExtResource("3_mn0hl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopBox"]
-position = Vector2(1.25989, 1.6647)
+position = Vector2(1.52002, 24.304)
 shape = SubResource("RectangleShape2D_cqb4m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TopBox"]

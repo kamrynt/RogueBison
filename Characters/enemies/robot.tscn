@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://eyulnxeeqtvx"]
+[gd_scene load_steps=10 format=3 uid="uid://dfuwfrdfl5886"]
 
 [ext_resource type="Script" path="res://Characters/base/NPCCharacterBase.gd" id="1_3yddv"]
 [ext_resource type="Shader" path="res://NonCharacters/pixelate.gdshader" id="2_45205"]
