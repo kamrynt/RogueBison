@@ -10,7 +10,7 @@ extends CharacterBody2D
 var player: Node2D
 var can_attack := true
 
-@onready var projectile_scene := preload("res://NonCharacters/ProjectileBase.tscn")
+@onready var projectile_scene := preload("res://NonCharacters/projectile.tscn")
 @onready var attack_timer := Timer.new()
 
 func _ready() -> void:

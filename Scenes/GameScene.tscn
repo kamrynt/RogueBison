@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ewwgrq1gxtx0" path="res://assets/UI/panels/panel_06.png" id="6_545m0"]
 [ext_resource type="Texture2D" uid="uid://ckbafilj6vcy" path="res://assets/UI/Pngs/RedButton.png" id="7_lh5p1"]
 [ext_resource type="PackedScene" uid="uid://ckbhp0erdge82" path="res://Characters/base/PlayerCharacterBase.tscn" id="7_shydr"]
-[ext_resource type="PackedScene" uid="uid://cy7ehgclfgvrb" path="res://NonCharacters/bookshelf.tscn" id="7_tjgtn"]
+[ext_resource type="PackedScene" uid="uid://c5ypog13t8c8f" path="res://NonCharacters/bookshelf.tscn" id="7_tjgtn"]
 [ext_resource type="Texture2D" uid="uid://c4d4n1uoeik0j" path="res://assets/UI/Pngs/GreenButton.png" id="8_ax5dl"]
 [ext_resource type="Script" path="res://Scenes/game_scene.gd" id="8_yvg1b"]
 [ext_resource type="Script" path="res://Scenes/canvas_layer.gd" id="12_bk1xj"]
@@ -50,10 +50,6 @@ offset_top = 47.0
 offset_right = 117.0
 offset_bottom = 70.0
 text = "123"
-
-[node name="Label4" type="Label" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="WaveTimer" type="Timer" parent="."]
 wait_time = 30.0

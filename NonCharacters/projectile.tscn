@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqppgaoo0m3b7"]
+[gd_scene load_steps=4 format=3 uid="uid://bwkc3wgllublq"]
 
 [ext_resource type="Texture2D" uid="uid://cv1qjw666twjo" path="res://assets/ball.png" id="1_3st8m"]
 [ext_resource type="Script" path="res://NonCharacters/projectile.gd" id="1_8q3au"]
@@ -7,7 +7,7 @@
 size = Vector2(35.9219, 29.5625)
 
 [node name="Projectile" type="Area2D"]
-collision_layer = 8
+collision_layer = 0
 collision_mask = 7
 script = ExtResource("1_8q3au")
 

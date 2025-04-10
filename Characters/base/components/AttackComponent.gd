@@ -9,7 +9,8 @@ signal attack_signal(state)
 var cooldown_timer := 0.0
 
 @onready var main := get_tree().get_root().get_node("Main2D")
-@onready var projectile_scene := preload("res://NonCharacters/Items/tempweapon/tempprojectile.tscn")
+@onready var projectile_scene := preload("res://NonCharacters/projectile.tscn")
+#@onready var projectile_scene := preload("res://NonCharacters/Items/tempweapon/tempprojectile.tscn")
 @onready var parent: CharacterBody2D = get_parent()
 
 func _ready() -> void:
