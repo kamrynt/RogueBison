@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://drtysht8wh26l"]
+[gd_scene load_steps=18 format=4 uid="uid://d325r17l8y7rd"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_q2c7o"]
 [ext_resource type="Texture2D" uid="uid://cxfnxq1nrdgbp" path="res://assets/gpt tilesets/yard/ChatGPT Image Apr 1 2025 (1).png" id="2_k5d3x"]

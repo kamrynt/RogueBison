@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl6xw8xtcbaox"]
+[gd_scene load_steps=5 format=3 uid="uid://dlrk3lx6x82vh"]
 
 [ext_resource type="Script" path="res://NonCharacters/ProjectileBase.gd" id="1_yf2jj"]
 [ext_resource type="Texture2D" uid="uid://cv1qjw666twjo" path="res://assets/ball.png" id="2_3cqpl"]
@@ -8,7 +8,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_1eq6i"]
 
 [node name="ProjectileBase" type="Area2D"]
-collision_mask = 0
+collision_layer = 0
+collision_mask = 7
 script = ExtResource("1_yf2jj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

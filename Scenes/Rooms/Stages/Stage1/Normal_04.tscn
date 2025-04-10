@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cplx4tkxxr5ku"]
+[gd_scene load_steps=18 format=4 uid="uid://vrilhlnsqnmn"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_2jjo5"]
 [ext_resource type="Script" path="res://Scenes/Rooms/Stages/Stage1/DoorArea.gd" id="2_nuypn"]

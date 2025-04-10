@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bxf1l08yr42wv"]
+[gd_scene load_steps=47 format=3 uid="uid://cqp6cqh0w4sih"]
 
 [ext_resource type="Script" path="res://Characters/base/companion.gd" id="1_q3hbb"]
 [ext_resource type="Texture2D" uid="uid://bljaopngrjvbv" path="res://assets/Bison Buck Spritesheet.png" id="2_bu126"]
