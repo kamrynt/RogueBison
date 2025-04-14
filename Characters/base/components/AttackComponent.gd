@@ -9,7 +9,8 @@ signal attack_signal(state)
 var cooldown_timer := 0.0
 
 @onready var main := get_tree().get_root().get_node("Main2D")
-@onready var projectile_scene := preload("res://NonCharacters/Items/tempweapon/tempprojectile.tscn")
+#@onready var projectile_scene := preload("res://NonCharacters/projectile.tscn")
+#@onready var projectile_scene := preload("res://NonCharacters/ProjectileBase.tscn")
 @onready var parent: CharacterBody2D = get_parent()
 
 func _ready() -> void:
@@ -47,30 +48,36 @@ func _state_logic(delta: float) -> void:
 
 
 
-func shoot(dir: float) -> void:
+func shoot(direction):
 	if cooldown_timer > 0:
 		return
 
+	var weapon: ItemBase = parent.weapon
+	if weapon == null:
+		return
+
 	set_state("attacking")
-	cooldown_timer = cooldown
+	var projectile = load(weapon.projectilePath)
+	var projectileInstance = projectile.instantiate()
 
-	var bullet = projectile_scene.instantiate()
+	cooldown_timer = weapon.cooldown
+	projectileInstance.damage = weapon.damage
+	projectileInstance.enabled = true
+	projectileInstance.dir = direction
+	projectileInstance.spawnPos = parent.global_position + Vector2.from_angle(direction - PI/2) * 30
+	projectileInstance.spawnRot = direction
 
-	var direction_vector = Vector2.from_angle(dir).normalized()
-	bullet.global_position = parent.global_position + direction_vector * 16  # closer to player
-	bullet.direction = direction_vector
-	bullet.speed = 450.0
-	bullet.damage = damage
-	bullet.shooter_type = "player"
-
-	main.add_child.call_deferred(bullet)
+	main.add_child.call_deferred(projectileInstance)
 
 
+	
+	
 func _get_transition(delta: float):
 	return null
 
 func _enter_state(new_state, old_state):
-	emit_signal("attack_signal", state)
+	#emit_signal("attack_signal", state)
+	pass
 
 func _exit_state(old_state, new_state):
 	pass

@@ -6,7 +6,7 @@ extends Area2D
 @export var shooter_type := "enemy"  # or "player"
 
 func _ready() -> void:
-	# Optional: destroy after 5 seconds in case it doesn't hit anything
+	connect("body_entered", Callable(self, "_on_body_entered"))  # ✅ connect signal
 	await get_tree().create_timer(5).timeout
 	queue_free()
 

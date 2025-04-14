@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://b8al2ovvkxea6"]
+[gd_scene load_steps=22 format=4 uid="uid://cyagbta5reqbo"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_abyod"]
 [ext_resource type="TileSet" uid="uid://d2r6muqog1lki" path="res://Scenes/FloorTileSet.tres" id="2_mue7p"]

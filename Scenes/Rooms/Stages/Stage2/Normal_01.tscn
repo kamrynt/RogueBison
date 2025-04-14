@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bhgjdrw63eqs6"]
+[gd_scene load_steps=22 format=4 uid="uid://b2xq3n53p74gg"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_ylkpr"]
 [ext_resource type="Texture2D" uid="uid://bgffdp7mcsrya" path="res://assets/gpt tilesets/cafeteria/ChatGPT Image Apr 1 2025 from Rogue Bison (2).png" id="2_60rj7"]
