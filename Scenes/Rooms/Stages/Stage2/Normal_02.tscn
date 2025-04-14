@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://dnfxym58t44uk"]
+[gd_scene load_steps=31 format=4 uid="uid://dnfxym58t44uk"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_5wsi6"]
 [ext_resource type="Texture2D" uid="uid://bgffdp7mcsrya" path="res://assets/gpt tilesets/cafeteria/ChatGPT Image Apr 1 2025 from Rogue Bison (2).png" id="2_kiq8j"]
@@ -10,6 +10,8 @@
 [ext_resource type="Theme" uid="uid://08a60qach4ub" path="res://pixel.tres" id="7_jfipl"]
 [ext_resource type="Texture2D" uid="uid://d34ogqgyxy7cr" path="res://assets/game/Hornet.png" id="8_is6nf"]
 [ext_resource type="Texture2D" uid="uid://c3cty7tiqq5mx" path="res://assets/game/health.png" id="9_u3xcv"]
+[ext_resource type="Texture2D" uid="uid://cfrtgmt4jo1mr" path="res://assets/game/bosshealthbar-empty 1.png" id="11_ktnb3"]
+[ext_resource type="PackedScene" uid="uid://cwoo74gyg8viu" path="res://Characters/enemies/pirate/pirate.tscn" id="12_d7e8v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j8ow1"]
 texture = ExtResource("2_kiq8j")
@@ -24636,3 +24638,34 @@ stretch_mode = 5
 [node name="MarginContainer3" type="MarginContainer" parent="Control/VBoxContainer2"]
 custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -362.0
+offset_right = 362.0
+offset_bottom = 151.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("11_ktnb3")
+
+[node name="Label" type="Label" parent="Control/VBoxContainer3"]
+layout_mode = 2
+theme = ExtResource("7_jfipl")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.792157, 0.501961, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
+text = "Brown Beard"
+horizontal_alignment = 1
+
+[node name="Pirate" parent="." instance=ExtResource("12_d7e8v")]
+position = Vector2(925, 407)

@@ -7,6 +7,6 @@ resource_local_to_scene = true
 default_font = ExtResource("1_h23wc")
 default_font_size = 16
 /colors/Font_Color = Color(0, 0, 0, 1)
-/colors/outline = Color(1, 1, 1, 1)
+/colors/outline = Color(0.64668, 0.458625, 0.0759412, 1)
 /font_sizes/Normal = 16
 /fonts/pixel = ExtResource("1_h23wc")
