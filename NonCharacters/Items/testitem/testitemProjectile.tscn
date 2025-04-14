@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdt3gfo7u1bg"]
 
-[ext_resource type="PackedScene" uid="uid://dlrk3lx6x82vh" path="res://NonCharacters/ProjectileBase.tscn" id="1_4yfsy"]
+[ext_resource type="PackedScene" uid="uid://b8nndkqn1u2o7" path="res://NonCharacters/ProjectileBase.tscn" id="1_4yfsy"]
 [ext_resource type="Texture2D" uid="uid://fhe4falubuf7" path="res://assets/Items/16x16 RPG Item Pack/Item__32.png" id="2_22hjq"]
 
 [node name="ProjectileBase" instance=ExtResource("1_4yfsy")]

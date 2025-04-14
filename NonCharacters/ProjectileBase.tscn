@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlrk3lx6x82vh"]
+[gd_scene load_steps=5 format=3 uid="uid://b8nndkqn1u2o7"]
 
 [ext_resource type="Script" path="res://NonCharacters/ProjectileBase.gd" id="1_yf2jj"]
 [ext_resource type="Texture2D" uid="uid://cv1qjw666twjo" path="res://assets/ball.png" id="2_3cqpl"]
