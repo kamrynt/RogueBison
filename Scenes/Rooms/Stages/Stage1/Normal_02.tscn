@@ -1,9 +1,10 @@
-[gd_scene load_steps=22 format=4 uid="uid://cgnly2jfb1f2l"]
+[gd_scene load_steps=23 format=4 uid="uid://dis3e23j3egkd"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/Room.gd" id="1_0m4ta"]
 [ext_resource type="TileSet" uid="uid://d2r6muqog1lki" path="res://Scenes/FloorTileSet.tres" id="2_dhnyt"]
 [ext_resource type="Script" path="res://Scenes/Rooms/Stages/Stage1/DoorArea.gd" id="3_2o75i"]
 [ext_resource type="Texture2D" uid="uid://cav4gp7iaopc5" path="res://assets/SchoolTileset/SchoolTileset/RPGMaker/$School_Door_32.png" id="4_cvopc"]
+[ext_resource type="PackedScene" uid="uid://mnwl2bwkdwgc" path="res://Characters/enemies/bear.tscn" id="5_xdwv8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqb4m"]
 size = Vector2(164, 84.3094)
@@ -162,6 +163,31 @@ script = ExtResource("3_2o75i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightBox"]
 shape = SubResource("RectangleShape2D_i78nc")
+
+[node name="Bear" parent="." instance=ExtResource("5_xdwv8")]
+position = Vector2(915, 361)
+attack_range = 40.0
+attack_damage = 20.0
+
+[node name="Bear2" parent="." instance=ExtResource("5_xdwv8")]
+position = Vector2(796, 298)
+attack_range = 40.0
+attack_damage = 20.0
+
+[node name="Bear3" parent="." instance=ExtResource("5_xdwv8")]
+position = Vector2(721, 392)
+attack_range = 40.0
+attack_damage = 20.0
+
+[node name="Bear4" parent="." instance=ExtResource("5_xdwv8")]
+position = Vector2(914, 451)
+attack_range = 40.0
+attack_damage = 20.0
+
+[node name="Bear5" parent="." instance=ExtResource("5_xdwv8")]
+position = Vector2(929, 267)
+attack_range = 40.0
+attack_damage = 20.0
 
 [connection signal="body_entered" from="TopBox" to="." method="_on_top_box_body_entered"]
 [connection signal="body_exited" from="TopBox" to="." method="_on_top_box_body_exited"]

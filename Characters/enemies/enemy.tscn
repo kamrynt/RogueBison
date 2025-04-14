@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Characters/enemies/enemy.gd" id="2_3ewsk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68a2g"]
-size = Vector2(48.9375, 50.8125)
+size = Vector2(79.4688, 68.4062)
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
 process_mode = 1
@@ -13,7 +13,7 @@ collision_mask = 15
 script = ExtResource("2_3ewsk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(28, 25)
+position = Vector2(26, 26)
 scale = Vector2(0.0216, 0.02)
 texture = ExtResource("1_nhhff")
 
