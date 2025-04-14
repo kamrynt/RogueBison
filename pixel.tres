@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://08a60qach4ub"]
+
+[ext_resource type="FontFile" uid="uid://b4eqpgowsjryt" path="res://assets/fonts/PixelifySans-Regular.ttf" id="1_h23wc"]
+
+[resource]
+resource_local_to_scene = true
+default_font = ExtResource("1_h23wc")
+default_font_size = 16
+/colors/Font_Color = Color(0, 0, 0, 1)
+/colors/outline = Color(1, 1, 1, 1)
+/font_sizes/Normal = 16
+/fonts/pixel = ExtResource("1_h23wc")

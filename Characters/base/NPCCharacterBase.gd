@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -400.0
 @export var healthNode: HealthComponent = null
 @export var movementNode: NPCMovementComponent = null
 @export var attackNode: NPCAttackComponent = null
+@export var npcname: String = "default enemy"
 
 func set_target(target: CharacterBody2D):
 	if movementNode != null:

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpbo7kwxuskor"]
+
+[ext_resource type="PackedScene" uid="uid://c67emik172gjr" path="res://Characters/base/NPCCharacterBase.tscn" id="1_bk3bo"]
+
+[node name="NPCCharacterBase" instance=ExtResource("1_bk3bo")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(-4.99998, -3.99999)
+scale = Vector2(10.1975, 10.1975)

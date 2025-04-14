@@ -38,7 +38,10 @@ func movement(delta):
 		if velocity.length() <= 0.001:
 			set_state("idle")
 			update_animation(Vector2.ZERO)  # Switch to idle when stopping
-
+	
+	if not(null == parent.weapon):
+		parent.weapon.position
+	
 	parent.velocity = velocity
 	parent.move_and_slide()
 

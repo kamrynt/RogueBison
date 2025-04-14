@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://7nq7dbwnkvey"]
+
+[ext_resource type="PackedScene" uid="uid://bb63t815kkhsd" path="res://NonCharacters/Item.tscn" id="1_sksy4"]
+[ext_resource type="Texture2D" uid="uid://bg2v17b6tlj4u" path="res://assets/game/hornetingame.png" id="2_m7cnf"]
+
+[node name="Item" instance=ExtResource("1_sksy4")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(9.53674e-07, 1.90735e-06)
+scale = Vector2(0.552051, 0.552051)
+texture = ExtResource("2_m7cnf")

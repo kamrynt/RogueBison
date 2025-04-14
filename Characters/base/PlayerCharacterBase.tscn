@@ -76,7 +76,7 @@ movementNode = NodePath("UserMovementComponent")
 attackNode = NodePath("AttackComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-15.5, -26)
+position = Vector2(-5, 4)
 scale = Vector2(0.602564, 0.59375)
 sprite_frames = SubResource("SpriteFrames_b2fr1")
 animation = &"walk_right"
@@ -84,7 +84,6 @@ frame_progress = 0.49846
 script = ExtResource("3_d2oiq")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-10.5, -27)
 shape = SubResource("RectangleShape2D_3mu6b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

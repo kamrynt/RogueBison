@@ -58,13 +58,14 @@ func shoot(direction):
 
 	set_state("attacking")
 	var projectile = load(weapon.projectilePath)
+	print(weapon.itemName)
 	var projectileInstance = projectile.instantiate()
-
+	#print(type_string(typeof(projectileInstance)))
 	cooldown_timer = weapon.cooldown
 	projectileInstance.damage = weapon.damage
 	projectileInstance.enabled = true
-	projectileInstance.dir = direction
-	projectileInstance.spawnPos = parent.global_position + Vector2.from_angle(direction - PI/2) * 30
+	projectileInstance.dir = direction + PI/2
+	projectileInstance.spawnPos = parent.global_position + Vector2.from_angle(direction) * 10
 	projectileInstance.spawnRot = direction
 
 	main.add_child.call_deferred(projectileInstance)
