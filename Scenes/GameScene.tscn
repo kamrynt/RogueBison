@@ -23,7 +23,7 @@ script = ExtResource("8_yvg1b")
 
 [node name="Character" parent="." groups=["player"] instance=ExtResource("7_shydr")]
 unique_name_in_owner = true
-position = Vector2(428, 466)
+position = Vector2(393, 466)
 collision_mask = 6
 up_direction = Vector2(0.707107, 0.707107)
 

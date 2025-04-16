@@ -57,7 +57,7 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mu6b"]
 resource_name = "CharacterHitbox"
-size = Vector2(31, 72)
+size = Vector2(43, 72)
 
 [sub_resource type="Animation" id="Animation_jr841"]
 resource_name = "idle"
@@ -84,7 +84,7 @@ frame_progress = 0.49846
 script = ExtResource("3_d2oiq")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-10.5, -27)
+position = Vector2(-11.5, -27)
 shape = SubResource("RectangleShape2D_3mu6b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

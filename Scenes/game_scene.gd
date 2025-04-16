@@ -78,16 +78,17 @@ func _on_WaveTimer_timeout() -> void:
 		var enemy = enemy_scene.instantiate()
 
 		# Spawn near top-left of the current room
-		var spawn_x = randf_range(40, 100)
-		var spawn_y = randf_range(40, 100)
+		var spawn_x = randf_range(100, 300)
+		var spawn_y = randf_range(100, 200)
 		var spawn_pos = mapGenerator.currentRoom.global_position + Vector2(spawn_x, spawn_y)
 
-		enemy.global_position = spawn_pos
+		enemy.global_position = mapGenerator.currentRoom.global_position + Vector2(spawn_x, spawn_y)
+
 		mapGenerator.currentRoom.add_child(enemy)
 		spawn_count += 1
 
 	current_wave += 1
-	wave_timer.wait_time = 30
+	wave_timer.wait_time = 10
 	wave_timer.start()
 func _on_companion_mode_selected(mode: String):
 	if companion_instance:
