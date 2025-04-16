@@ -80,7 +80,6 @@ position = Vector2(-5, 4)
 scale = Vector2(0.602564, 0.59375)
 sprite_frames = SubResource("SpriteFrames_b2fr1")
 animation = &"walk_right"
-frame_progress = 0.49846
 script = ExtResource("3_d2oiq")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]

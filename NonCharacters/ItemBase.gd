@@ -22,7 +22,7 @@ enum ItemTypes {ActiveSkill,PassiveSkill,Consumable,Weapon}
 var playerIsOnTop: bool = false
 
 func _process(delta: float) -> void:
-	if playerIsOnTop and Input.is_action_pressed("ui_accept"):
+	if playerIsOnTop and Input.is_action_pressed("ui_accept") and parent != self.parent:
 		swapItems()
 
 
@@ -30,6 +30,7 @@ func swapItems():
 	var player : PlayerCharacterBase = get_tree().get_root().get_node('Main2D/Character')
 	if itemType == ItemTypes.Weapon:
 		player.weapon = self
+		self.parent = player
 		get_parent().remove_child(self)
 
 

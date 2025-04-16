@@ -29,18 +29,22 @@ func _state_logic(delta):
 		shoot(toTargetDir.angle() + PI/2)
 	
 
-func shoot(dir):
-	pass
-	#if(cooldown_timer > 0): return
-	#set_state("attacking")
-	#cooldown_timer = cooldown
-	#var instance = projectile.instantiate()
-	#instance.dir = dir
-	#instance.mask = 1
-	#instance.damage = damage	
-	#instance.spawnPos = parent.global_position + Vector2.from_angle(dir - PI/2) * 30
-	#instance.spawnRot = dir
-	#main.add_child.call_deferred(instance)
+func shoot(direction):
+	if cooldown_timer > 0:
+		return
+
+	set_state("attacking")
+	var projectile = load("res://NonCharacters/Items/pirate/pirate_projectile.tscn")
+	var projectileInstance = projectile.instantiate()
+	cooldown_timer = 0.1
+	#projectileInstance.set_collision_mask_bit(0,)
+	projectileInstance.damage = 1
+	projectileInstance.enabled = true
+	projectileInstance.dir = direction + PI/2
+	projectileInstance.spawnPos = parent.global_position + Vector2.from_angle(direction) * 10
+	projectileInstance.spawnRot = direction
+
+	main.add_child.call_deferred(projectileInstance)
 
 func _get_transition(delta):
 	return null
