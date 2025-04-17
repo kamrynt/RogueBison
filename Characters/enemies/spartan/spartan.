@@ -1,0 +1,190 @@
+[gd_scene load_steps=7 format=3 uid="uid://e5ueo7cwk52ej"]
+
+[ext_resource type="Texture2D" uid="uid://dxu6jvk0td8b" path="res://assets/boss/Evil Green Knight Attack Running.png" id="2_pa00d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xcqc"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6y3c7"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ldrd"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgyl0"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rm1xf"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(600, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lulfx"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(750, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2e31d"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(900, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run1"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(1050, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run2"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(1200, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run3"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(1350, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run4"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(1500, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run5"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(1650, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run6"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(1800, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run7"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(1950, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle1"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(2100, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle2"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(2250, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle3"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(2400, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle4"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(2550, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_death1"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(2700, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_death2"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(2850, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_death3"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(3000, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_death4"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(3150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_death5"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(3300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_death6"]
+atlas = ExtResource("2_pa00d")
+region = Rect2(3450, 0, 150, 150)
+
+[sub_resource type="Animation" id="Animation_Attack"]
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/enabled = true
+tracks/0/keys = {
+    "times": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6],
+    "values": [
+        SubResource("AtlasTexture_0xcqc"),
+        SubResource("AtlasTexture_6y3c7"),
+        SubResource("AtlasTexture_7ldrd"),
+        SubResource("AtlasTexture_jgyl0"),
+        SubResource("AtlasTexture_rm1xf"),
+        SubResource("AtlasTexture_lulfx"),
+        SubResource("AtlasTexture_2e31d")
+    ]
+}
+
+[sub_resource type="Animation" id="Animation_Run"]
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/enabled = true
+tracks/0/keys = {
+    "times": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6],
+    "values": [
+        SubResource("AtlasTexture_run1"),
+        SubResource("AtlasTexture_run2"),
+        SubResource("AtlasTexture_run3"),
+        SubResource("AtlasTexture_run4"),
+        SubResource("AtlasTexture_run5"),
+        SubResource("AtlasTexture_run6"),
+        SubResource("AtlasTexture_run7")
+    ]
+}
+
+[sub_resource type="Animation" id="Animation_Idle"]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/enabled = true
+tracks/0/keys = {
+    "times": [0.0, 0.1, 0.2, 0.3],
+    "values": [
+        SubResource("AtlasTexture_idle1"),
+        SubResource("AtlasTexture_idle2"),
+        SubResource("AtlasTexture_idle3"),
+        SubResource("AtlasTexture_idle4")
+    ]
+}
+
+[sub_resource type="Animation" id="Animation_Death"]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/enabled = true
+tracks/0/keys = {
+    "times": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5],
+    "values": [
+        SubResource("AtlasTexture_death1"),
+        SubResource("AtlasTexture_death2"),
+        SubResource("AtlasTexture_death3"),
+        SubResource("AtlasTexture_death4"),
+        SubResource("AtlasTexture_death5"),
+        SubResource("AtlasTexture_death6")
+    ]
+}
+
+[node name="SpartanBossRoom" type="Node2D"]
+
+[node name="SpartanBoss" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="SpartanBoss"]
+texture = SubResource("AtlasTexture_0xcqc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpartanBoss"]
+anims = {
+"Attack": SubResource("Animation_Attack"),
+"Run": SubResource("Animation_Run"),
+"Idle": SubResource("Animation_Idle"),
+"Death": SubResource("Animation_Death")
+}
