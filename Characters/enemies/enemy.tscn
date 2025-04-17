@@ -8,6 +8,7 @@ size = Vector2(79.4688, 68.4062)
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
 process_mode = 1
+position = Vector2(1, 2)
 collision_layer = 2
 collision_mask = 15
 script = ExtResource("2_3ewsk")
@@ -18,7 +19,7 @@ scale = Vector2(0.0216, 0.02)
 texture = ExtResource("1_nhhff")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(25, 26)
+position = Vector2(39, 33)
 shape = SubResource("RectangleShape2D_68a2g")
 
 [node name="WanderTimer" type="Timer" parent="."]

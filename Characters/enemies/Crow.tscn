@@ -1,0 +1,152 @@
+[gd_scene load_steps=19 format=3 uid="uid://dvlhukk3htfdy"]
+
+[ext_resource type="Script" path="res://Characters/enemies/crow.gd" id="1_bl6i8"]
+[ext_resource type="Texture2D" uid="uid://d1yp58834volk" path="res://assets/crow sheet.png" id="2_q7da1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbhio"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(808, 364, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fnjv"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(1212, 364, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jbic"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(1616, 364, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsn1y"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(2020, 364, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqp5"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(2424, 364, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4hgb"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(2828, 364, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynpy1"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(0, 728, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we537"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(404, 728, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vpct"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(808, 728, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d71ej"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(1212, 728, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lxco"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(1616, 728, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cem78"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(808, 2548, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypnrh"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(1212, 2548, 404, 364)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmaky"]
+atlas = ExtResource("2_q7da1")
+region = Rect2(808, 364, 404, 364)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7nww4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbhio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fnjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jbic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsn1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4hgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynpy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we537")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vpct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d71ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lxco")
+}],
+"loop": true,
+"name": &"flapping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cem78")
+}],
+"loop": true,
+"name": &"gliding_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypnrh")
+}],
+"loop": true,
+"name": &"gliding_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmaky")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xwab"]
+size = Vector2(44, 49.5)
+
+[node name="crow" type="CharacterBody2D" groups=["enemies"]]
+process_mode = 1
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("1_bl6i8")
+
+[node name="WanderTimer" type="Timer" parent="."]
+process_mode = 1
+wait_time = 2.0
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(25, 29)
+rotation = 1.5708
+scale = Vector2(0.134901, 0.114011)
+sprite_frames = SubResource("SpriteFrames_7nww4")
+animation = &"gliding_right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24, 25.75)
+shape = SubResource("RectangleShape2D_6xwab")
+
+[connection signal="timeout" from="WanderTimer" to="." method="_on_wander_timer_timeout"]

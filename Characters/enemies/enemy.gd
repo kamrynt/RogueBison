@@ -51,15 +51,23 @@ func set_random_direction() -> void:
 	velocity = Vector2(cos(angle), sin(angle)).normalized()
 
 func shoot_projectile(direction: Vector2) -> void:
+	if direction.length_squared() == 0:
+		print("⚠️ Skipping projectile because direction is zero.")
+		return
+
 	can_attack = false
 	attack_timer.start()
 
 	var bullet = projectile_scene.instantiate()
-	bullet.global_position = global_position
-	bullet.direction = direction
+	bullet.direction = direction.normalized()  # ✅ Set first
 	bullet.speed = projectile_speed
 	bullet.shooter_type = "enemy"
+	bullet.global_position = global_position
 	get_parent().add_child(bullet)
+
+	print("✅ Bullet fired with direction: ", bullet.direction)
+
+
 
 func _on_attack_timer_timeout() -> void:
 	can_attack = true
