@@ -91,3 +91,14 @@ summon_companion={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+
+[shader_globals]
+
+currentTime={
+"type": "float",
+"value": 0.0
+}
+blinkDuration={
+"type": "float",
+"value": 0.1
+}
